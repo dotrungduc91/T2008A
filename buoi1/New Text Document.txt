@@ -1,0 +1,9 @@
+Home work:
+1. Frontend/ Backend
+2. N2 frondend/ N2 backend
+3. Domain => dang ky => tao 1 ten mien rieng (duoi .tk... free)
+4. Http/ https
+5. Host?, sever? , khac nhau cho nao
+Dang ky host 000 webhost
+
+Tim hieu ve Git(trong gokisoft co tai lieu), cac bai tap day len Git
