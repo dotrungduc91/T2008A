@@ -1,0 +1,35 @@
+body{
+	background-color: green
+}
+
+h2:link {
+	color: blue;
+}
+
+h2:active{
+	color: green;
+}
+
+h2:hover{
+	color: yellow;
+}
+
+h2:visited {
+	color: red;
+}
+
+a:link {
+	color: blue;
+}
+
+a:active{
+	color: green;
+}
+
+a:hover{
+	color: yellow;
+}
+
+a:visited {
+	color: red;
+}
