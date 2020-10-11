@@ -1,0 +1,40 @@
+body{
+	background-color: #FFFFCC
+}
+
+h2{
+	text-decoration: underline;
+	text-align: center;
+}
+
+.navigation{
+	border: thin solid black;
+	border-radius: 20px;
+	background-color: #86db8b;
+	text-align: center;
+	width: 60px;
+	margin-left: 5px;
+}
+
+
+#tablesectionOne, #tablesectionTwo, #tablesectionThree, #tablesectionFour{
+	table-layout: fixed;
+	text-align: center;
+	background-color: #FFFFDD;
+	position: absolute;
+	left: 32%;
+	top: 50px;
+	width: 500px;
+}
+
+.caption{
+	background-color: rgb(255,185,115);
+	font-family: Arial;
+	font-size: 1em;
+	text-align: center;
+}
+
+
+
+
+
