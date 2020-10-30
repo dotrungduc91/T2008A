@@ -1,0 +1,254 @@
+
+/*PHAN FOOTER*/
+.total_footer{
+	width: 100%;
+	display: flex;
+	background-color: white;
+}
+ .button{
+ 	background-color: orange;
+ 	color: : white;
+ 	font-weight: bold;
+ 	height: 50px;
+ 	width: 50%;
+ 	border-radius: 5px;
+ 	margin-top: 18px;
+ 	margin-right: 40px;
+ 	border: none;
+ 	cursor: pointer;
+ 	float: right;
+
+ }
+
+.total_contact{
+	width: 100%;
+	background-color:white;
+	border: #f3f3f3 solid 1px;
+    font-weight: normal;
+
+}
+ .contact1{
+ 	width: 25%;
+ 	/*background-color: red;*/
+ 	list-style-type: none;
+ 	text-align: left;
+ 	line-height: 30px;
+ 	float: left;
+ }
+  .contact2{
+ 	width: 25%;
+ 	/*background-color: yellow;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ 	float: left;
+ }
+  .contact3{
+ 	width: 25%;
+ /*	background-color: green;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ 	float: left;
+ }
+  .contact4{
+ 	width: 25%;
+ /*	background-color: pink;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ 	float: left;
+ }
+
+ .footer_finish{
+ 	width: 100%;
+ 	text-align: center;
+ 	color: #6d6d6d;
+ 	font-size: 12px;
+ 	/*padding: 15px;*/
+ 	line-height: 20px;
+ 	background-color: white;
+ }
+
+.tel{
+	position: fixed;
+	width: 10%; 
+	/*height: 10%;*/
+	background-color:orange;
+	border-radius: 5px;
+	text-align: center;
+	padding: 5px;
+	float: right;
+
+	top: 500px;
+	left: 90%;
+}
+
+
+
+/*Boddy*/
+body{
+	background-color: #f4f4f4;
+
+}
+
+
+/*Header style */
+
+
+ .headerbanner1{
+	width: 100%;
+	height: 55px;
+	background-color: #00004d;
+	text-align: center;
+}
+
+
+
+/*THANH TIM KIEM*/
+.header{
+	width: 100%;
+	height: 55px;
+	background-color:#ff471a;
+	float: left;
+}
+
+.header_left{
+	width: 29.5%;
+	height: 55px;
+	background-color: white;
+	margin-left: 50px;
+	float: left;
+
+}
+
+.header_left input{
+	height:65%;
+	width: 78%;
+	float:left; 
+	margin-top: 5px;
+	border: none;
+	}
+
+
+.city_selection{
+	width: 23%;
+	height: 80%;
+	float: left;
+}
+
+.city{
+	width: 100%;
+	border-color: #ff471a;
+	height: 50px;
+	margin-top: 2px;
+	border-width: 2px;
+	border-right: none;
+
+}
+
+.search{
+	width: 55%;
+	border: 2px #ff471a solid;
+	margin-top: 2px;
+	height: 84%;
+	float: left;
+}
+
+
+.header_left button img{
+	width: 100%;
+	height: 100%;
+	}
+
+.header_left button{
+	float: right;
+	padding: 4px;
+	border: none;
+	margin-top:5px;
+	cursor: pointer;
+	background-color: white;
+}
+
+.header_right{
+	width: 65%;
+	height: 55px;
+	float: right;
+	margin-right: 5px;
+	padding-left: 1px;
+	float: left;
+
+}
+
+.header_right ul{
+	list-style-type: none;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.header_right ul li {
+	margin-left: 25px;
+}
+
+.header_right ul li a{
+	font-size: 11px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.header_right ul li a img{
+	vertical-align: middle;
+}
+
+
+.main_header{
+	width:100%;
+	height:400px;
+	padding-top: 10px;
+}
+
+.main_header_samsung{
+	width: 60%;
+	height: 400px;
+	margin-left: 50px;
+}
+
+/*PHAN SAN PHAM 1*/
+.header_detail{
+	width: 100%;
+	margin: 0 auto;
+	background-color: white;
+	display: block;
+	float: left;
+}
+
+.container_one{
+	width: 100%;
+	float: left;
+	background-color: white;
+}
+
+.container_one_total{
+	background-color: white;
+	width: 94%;
+	margin: 0 auto;
+	display: flex;
+	border-top: thin grey solid;
+	padding-top: 1%;
+}
+
+.container_one_left{
+	width: 40%;
+	
+}
+
+.container_one_center{
+	width: 35%;
+	/*background-color: yellow;*/
+	text-align: center;
+
+}
+
+.container_one_right{
+	width: 25%;
+
+}
+

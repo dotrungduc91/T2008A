@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoanApplication</title>
+	<style type="text/css">
+
+		.total{
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		.header{
+		 font-weight: bolder;
+		 background-color: #ffccf2;
+		 border: 1px solid;
+		 margin-top: 0 auto;
+		}
+
+		.main_one, .main_two, .main_three{
+			padding: 5px;
+			margin-top: 20px;
+			border: 1px solid;
+		}	
+
+		.mainone label {
+			background-color: white;
+		}	
+
+		.row{
+			display: flex;
+			margin-top: 5px;
+		}
+
+		.text_row{
+			width: 20%;
+
+		}
+
+		.fill_row{
+			width: 50%
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="total">
+		<form>
+		<div class="header">Loan Application Form</div>
+		<div class="main_one">
+			<div style="background-color: white; margin-top: -15px; color: #80b3ff; width: 25%">Applicant's Personal Information</div>
+			<div style="background-color: #ffccf2; padding-left: 5%; ">
+			<div class="row">
+				<div class="text_row">Full name:</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Date of birth:</div>
+				<input required class="fill_row" type="Date" name="" width="50%">
+			</div>			
+
+			<div class="row">
+				<div class="text_row">Phone number:</div>
+				<input required class="fill_row" type="number" name="" width="50%" minlength="10">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Address:</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Zip Code:</div>
+				<input required class="fill_row" type="text" name="" width="50%" pattern="[0-9]{3}[-][0-9]{4}[-][0-9]{3}">
+			</div>
+			</div>
+		</div>
+
+		<div class="main_two">
+			<div style="background-color: white; margin-top: -15px; color: #80b3ff; width: 28%">Applicant's Employment Information</div>
+			<div style="background-color: #ffccf2; padding-left: 5%; ">
+			<div class="row">
+				<div class="text_row">Current Emoloyer:</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Employer Address:</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>			
+
+			<div class="row">
+				<div class="text_row">Date of johning (mm/dd/yyyy):</div>
+				<input required class="fill_row" type="date" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Phone number:</div>
+				<input required class="fill_row" type="number" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Email ID:</div>
+				<input required class="fill_row" type="Email" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Fax:</div>
+				<input required class="fill_row" type="number" name="" width="50%" pattern="[0-9]{3}[-][0-9]{7}">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Designation:</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Annual Income:</div>
+				<input required class="fill_row" type="number" name="" width="50%">
+			</div>
+
+			</div>
+		</div>
+
+
+		<div class="main_three">
+			<div style="background-color: white; margin-top: -15px; color: #80b3ff; width: 25%">Applicant's Personal Information</div>
+			<div style="background-color: #ffccf2; padding-left: 5%; ">
+			<div class="row">
+				<div class="text_row">Loan type:</div>
+				<select required class="fill_row" type="text" name="" width="50%">
+					<option>--Select--</option>
+					<option>Personal Loan</option>
+					<option>Home Loan</option>
+					<option>Vehicle Loan</option>
+					<option>Business Loan</option>
+					<option>Education Loan</option>
+				</select>
+				
+			</div>
+
+			<div class="row">
+				<div class="text_row">Principal:</div>
+				<input required class="fill_row" type="number" name="" width="50%">
+			</div>			
+
+			<div class="row">
+				<div class="text_row">Period (Months):</div>
+				<input required class="fill_row" type="number" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row">Interest(%):</div>
+				<input required class="fill_row" type="text" name="" width="50%">
+			</div>
+
+			<div class="row">
+				<div class="text_row"></div>
+				<button type="Submit">Submit</button>
+				<button style="margin-left: 5px;" type="reset">Reset</button>
+			</div>
+
+			</div>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

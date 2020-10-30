@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bai2.css">
+
+	<title>Registation Form * Form Tutorial</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div style="display: flex;">                                                    <!-- PHAN HEADER -->
+			
+		
+			
+	<nav class="navbar navbar-expand-sm bg-dark" style="text-align: center; width: 100%">
+		<ul class="navbar-nav">
+   				 <li class="nav-item">
+    		 		 <a class="nav-link text-white" href="#">Hàng thật - Giá chuẩn - Phục vụ tận tâm</a>
+   				 </li>
+  		</ul>
+
+  		<ul class="navbar-nav" style="margin-left: 18%">
+
+   				 <li class="nav-item" style="display: flex;">
+    		 	     <i style="font-size: 25px; color: yellow; margin-top: 7px;" class="fas fa-phone-volume"></i><a class="nav-link text-white" href="#">Hotline: 0976.9583.653 - 0985.7632.341 - 0763.9724.134 </a>
+   				 </li>
+  		</ul>
+
+  		<form class="form-inline" action="/action_page.php">
+    			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+    			<button class="btn btn-success" type="submit">Search</button>
+  		</form>
+  	</nav>
+			
+			
+
+			
+		</div>
+
+		<div style="display: flex;">   <!-- PHAN THANH MENU  -->
+			<div style="width: 40%; text-align: center;">
+				<img style="width: 25%" src="">
+			</div>
+			<div style="width: 60%">
+				<!-- Nav pills -->
+				<ul class="nav nav-pills" style=" margin-left: 6%">
+				  <li class="test" class="nav-item">
+				    <a style="color: black" class="nav-link active" data-toggle="pill" href="#home">ĐỒNG HỒ NAM</a>
+				  </li>
+				  <li class="nav-item">
+				    <a  style="color: black" class="nav-link" data-toggle="pill" href="#menu1">ĐỒNG HỒ NỮ</a>
+				  </li>
+				  <li class="nav-item">
+				    <a style="color: black" class="nav-link" data-toggle="pill" href="#menu2">ĐỒNG HỒ ĐÔI</a>
+				  </li>
+				   <li class="nav-item">
+				    <a style="color: black" class="nav-link" data-toggle="pill" href="#menu2">MẪU HOT NHẤT</a>
+				  </li>
+				   <li class="nav-item">
+				    <a style="color: black" class="nav-link" data-toggle="pill" href="#menu2">SALE</a>
+				  </li>
+				   <li class="nav-item">
+				    <a style="color: black" class="nav-link" data-toggle="pill" href="#menu2">BLOG</a>
+				  </li>
+				</ul>
+
+				<!-- Tab panes -->
+		<!-- 		<div class="tab-content">
+				  <div class="tab-pane container active" id="home">...</div>
+				  <div class="tab-pane container fade" id="menu1">...</div>
+				  <div class="tab-pane container fade" id="menu2">...</div>
+				</div> -->
+			</div>
+		</div>   
+
+		<div> <!-- PHAN CHAY BANNER -->
+				<div id="demo" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ul class="carousel-indicators">
+				    <li data-target="#demo" data-slide-to="0"></li>
+				    <li data-target="#demo" data-slide-to="1"></li>
+				    <li data-target="#demo" data-slide-to="2"></li>
+				    <li data-target="#demo" data-slide-to="3"></li>
+				  </ul>
+				  
+				  <!-- The slideshow -->
+				  <div class="carousel-inner">
+				  	 <div class="carousel-item">
+				      <img src="banner.jpg" alt="New York" width="100%" height="500px">
+				    </div>
+				    <div class="carousel-item active">
+				      <img src="banner1.jpg" alt="Los Angeles" width="100%" height="500px">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="banner2.jpg" alt="Chicago" width="100%" height="500px">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="banner3.jpg" alt="New York" width="100%" height="500px">
+				    </div>
+
+				  </div>
+				  
+				  <!-- Left and right controls -->
+				  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+				    <span class="carousel-control-prev-icon"></span>
+				  </a>
+				  <a class="carousel-control-next" href="#demo" data-slide="next">
+				    <span class="carousel-control-next-icon"></span>
+				  </a>
+				</div>
+		</div>
+
+		<div class="container-fluid" style="margin-top: 20px"> <!-- PHÂN NOI DUNG MAIN-->
+			<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a style="background-color: black" class="nav-link" href="#">Danh mục sản phẩm </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Edox</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Michael Kor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Hamilton</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link disabled" href="#">Casio</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link " href="#">Rolex</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="#">Infiniti</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="#">Shinleng</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link " href="#">Okumata</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="#">Mandiver</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link " href="#">Lucembord</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Lamborfa</a>
+        </li>                                     
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+
+    <div class="col-md-9">
+    	<div class="row">
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho1.jpg" class="mx-auto d-block" style="width:100%;"> 
+			  <p>SP1</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho2.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP2</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho3.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP3</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho4.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP4</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+    	</div>
+
+    	<div class="row">
+    		<div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho1.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP1</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho2.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP2</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho3.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP3</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho4.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP4</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+    	</div>
+
+     	<div class="row">
+    		<div class="col-md-3">               <!-- BAT DAU PHAN SAN PHAM -->
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho1.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP1</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho2.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP2</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho3.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP3</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho4.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP4</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+    	</div>
+    	
+     	<div class="row">
+    		<div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho1.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP1</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho2.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP2</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho3.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP3</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+
+    		 <div class="col-md-3">
+    		<div class="container-fluid" style="text-align: center;">
+			  <img src="dongho4.jpg" class="mx-auto d-block" style="width:100%"> 
+			  <p>SP4</p>
+			  <div style="background-color: black; color: white; font-weight: bold; font-size: 13px; font-family: -apple-system">Giá liên hệ</div> 
+			</div>
+    		</div>
+    	</div>   	   	 <!-- KET THUC PHAN SAN PHAM --> 
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <div class="row">
+  		<div class="col-md-3">
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item">Địa chỉ: CaugGiay- Hanoi</li>
+			  <li class="list-group-item">Email: watchbeauty@gmail.com</li>
+			  <li class="list-group-item">Website: bestchoiwatch.com</li>
+			  <li class="list-group-item">Tel: 0963.3341.123</li>
+			</ul>
+  		</div>
+  		<div class="col-md-2">
+  			<ul class="list-group list-group-flush">
+			  <li class="list-group-item">ĐỒNG HỒ SỐ MỘT</li>
+			  <li class="list-group-item">Email: watchbeauty@gmail.com</li>
+			  <li class="list-group-item">Website: bestchoiwatch.com</li>
+			  <li class="list-group-item">Tel: 0963.3341.123</li>
+			</ul>
+  		</div>
+  		<div class="col-md-3">
+  			  <ul class="list-group list-group-flush">
+			  <li class="list-group-item">Địa chỉ: CaugGiay- Hanoi</li>
+			  <li class="list-group-item">Email: watchbeauty@gmail.com</li>
+			  <li class="list-group-item">Website: bestchoiwatch.com</li>
+			  <li class="list-group-item">Tel: 0963.3341.123</li>
+			</ul>
+  		</div>
+  		<div class="col-md-2">
+  			  <ul class="list-group list-group-flush">
+			  <li class="list-group-item">Địa chỉ: CaugGiay- Hanoi</li>
+			  <li class="list-group-item">Email: watchbeauty@gmail.com</li>
+			  <li class="list-group-item">Website: bestchoiwatch.com</li>
+			  <li class="list-group-item">Tel: 0963.3341.123</li>
+			</ul>
+  		</div>
+  		<div class="col-md-2">
+  			  <ul class="list-group list-group-flush">
+			  <li class="list-group-item">Địa chỉ: CaugGiay- Hanoi</li>
+			  <li class="list-group-item">Email: watchbeauty@gmail.com</li>
+			  <li class="list-group-item">Website: bestchoiwatch.com</li>
+			  <li class="list-group-item">Tel: 0963.3341.123</li>
+			</ul>
+  		</div>
+  </div>
+</div>
+		</div>
+
+	</div>
+
+	<div>
+		
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.1155873819853!2d106.77285661425708!3d10.878812360271553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8824c307f17%3A0xea9cca591eb16e43!2zxJDGsOG7nW5nIHPhu5EgOCwgTGluaCBYdcOibiwgVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1604044082825!5m2!1svi!2s" width="100%" height="450px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 		<div style="width: 20%"> 
+				<div style="background-color: black;color: white; font-weight: bold; text-align: center;" >DANH MỤC SẢN PHẨM</div>
+				<div class="list-group-flush list-group-item-action">
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Edox</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Michael Kor</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Marz Jcob</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Hamilton</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Casio</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Rolex</a>
+				   <a style="background-color: black;color: white" href="#" class="list-group-item">Longines</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Seiko</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Curnon</a>
+				   <a style="background-color: black;color: white" href="#" class="list-group-item">Kawashaki</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Levante</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Inifible</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Tisort</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Hublot</a>
+				  <a style="background-color: black;color: white" href="#" class="list-group-item">Tarmacia</a>
+				</div>
+			</div> --> 

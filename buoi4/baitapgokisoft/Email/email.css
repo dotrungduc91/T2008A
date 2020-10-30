@@ -1,0 +1,54 @@
+body{
+background-color: rgb(255,255,240);
+padding-left: 20%
+}
+
+.textarea{
+overflow: auto;
+}
+
+.imgHelp{
+	cursor: help;
+}
+
+.EmailEditor{
+	background-color: #FFFFDD
+}
+
+.main{
+	width: 500px;
+	background-color: #DDFFEE;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#help{
+	position: absolute;
+	height: 500px;
+	width: 420px;
+	top: 10px;
+	background-color: #cfc;
+	color: #303030;
+	border: #E4E7E7 solid 2px;
+}
+
+.close{
+	text-align: right;
+	color: blue;
+	cursor: hand;
+}
+
+ul{
+	list-style-type: none;
+	text-align: right;
+}
+li{
+	padding: 2px;
+	margin-right: 60px;
+}
+
+.ul_help{
+	list-style-image: url(bullet.jpg);
+	text-align: left;
+
+}

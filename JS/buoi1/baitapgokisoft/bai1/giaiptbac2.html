@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		alert('Giai phuong trinh bac 2: ax2 + bx + c = 0')
+		var a,b,c,x1,x2,x, delta;
+		a=prompt('Nhap he so a')
+		b=prompt('Nhap he so b')
+		c=prompt('Nhap he so c')
+
+		
+			if (a==0) {
+				if(b==0){
+					if(c==0){
+						alert('phuong trinh vo so nghiem')
+					}else{
+						alert('phuong trinh vo nghiem')
+						}
+					} else{
+						x = -c/b;
+						alert('phuong trinh co nghiem duy nhat x=' +x)
+					}
+				} else{
+					delta = b*b - 4*a*c;
+					if (delta<0) {
+						alert('phuong trinh vo nghiem')
+
+					}else{
+						if (delta==0) {
+							x = -b/2/a;
+							alert('phuong trinh co nghiem duy nhat x=' +x)
+						}else{
+							x1= (-b + Math.sqrt(delta))/(2*a);
+							x2= (-b - Math.sqrt(delta))/(2*a);
+						alert('phuong trinh 2 nghiem phan biet:' + '\n'+ 'x1=' + x1 + ',' + 'x2=' + x2)
+
+						}
+					}
+				}
+	</script>
+
+</body>
+</html>

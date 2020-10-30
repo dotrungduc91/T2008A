@@ -1,0 +1,312 @@
+
+/*Boddy*/
+body{
+	background-color: #f4f4f4;
+
+}
+
+div{
+	float: left;
+	/*border: thin solid red;
+	background-color: pink*/
+}
+
+/*Header style */
+
+
+ .headerbanner1{
+	width: 100%;
+	height: 50px;
+	background-color: #00004d;
+	text-align: center;
+}
+
+
+
+/*THANH TIM KIEM*/
+.header{
+	width: 100%;
+	height: 55px;
+	background-color:#ff471a;
+}
+
+.header_left{
+	width: 29.5%;
+	height: 55px;
+	background-color: white;
+	margin-left: 50px;
+
+}
+
+.header_left input{
+	height:65%;
+	width: 78%;
+	float:left; 
+	margin-top: 5px;
+	border: none;
+	}
+
+
+.city_selection{
+	width: 23%;
+	height: 80%
+}
+
+.city{
+	width: 100%;
+	border-color: #ff471a;
+	height: 50px;
+	margin-top: 2px;
+	border-width: 2px;
+	border-right: none;
+
+}
+
+.search{
+	width: 55%;
+	border: 2px #ff471a solid;
+	margin-top: 2px;
+	height: 84%;
+}
+
+
+.header_left button img{
+	width: 100%;
+	height: 100%;
+	}
+
+.header_left button{
+	float: right;
+	padding: 4px;
+	border: none;
+	margin-top:5px;
+	cursor: pointer;
+	background-color: white;
+}
+
+.header_right{
+	width: 65%;
+	height: 55px;
+	float: right;
+	margin-right: 5px;
+	padding-left: 1px;
+	/*background-color: red*/
+
+}
+
+.header_right ul{
+	list-style-type: none;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.header_right ul li {
+	margin-left: 25px;
+}
+
+.header_right ul li a{
+	font-size: 11px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.header_right ul li a img{
+	vertical-align: middle;
+}
+
+
+.main_header{
+	width:100%;
+	height:400px;
+	padding-top: 10px;
+}
+
+.main_header_samsung{
+	width: 60%;
+	height: 400px;
+	margin-left: 50px;
+}
+
+
+/*<!-- PHAN HEADER SAMSUNG NOTE 20 Phan duoi -->*/
+
+
+.main_header_samsung img{
+	width: 100%;
+	height: 345px;
+}
+.main_header_samsung ul{
+	display: flex;
+	list-style-type: none;
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.main_header_samsung ul li{
+	width: 20%;
+	height: 50px;
+	text-decoration: none;
+	border-right:#e6e6e6 solid 1px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+
+/*<!-- PHAN HEADER Pin va tin tuc -->*/
+.main_header_samsung_pin_tintuc{
+	width: 31%;
+	height: 400px;
+	/*background-color: pink;*/
+	float: right;
+	margin-right: 50px
+}
+
+.bannerpin{
+	height: 40%;
+	width: 399px;
+}
+
+.bannerpin img{
+	min-width: 399px;
+}
+
+.tincongnghe{
+	height: 60%;
+	width: 100%;
+	background-color: white;
+}
+
+.text_tincongnghe{
+	height: 12%;
+	width:100%;
+	padding-top: 10px;
+	color: red;
+	font-weight: bold;
+}
+
+.tincongnghe_content{
+	height: 44%;
+	width:100%;
+	border-bottom: #e6e6e6 solid 1px;
+}
+
+
+/*<!-- PHAN HINH ANH CAC SAN PHAM  -->
+	<!-- <BAN CHAY NHAT> */
+
+.main{
+	/*background-color: pink;*/
+	height: 360px;
+	width: 93%;
+	margin-left: 50px;
+	margin-top: 10px;
+	/*overflow: auto;*/
+}
+
+.title{
+	color: #f60;
+	font-weight: bold;
+	font-family: inherit;
+	margin: 0px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.content{
+	height: 90%;
+	width: 19.9%;
+	border-top: #f3f3f3 solid 1px;
+	border-right: #f3f3f3 solid 1px;
+	margin-bottom: 0px;
+	text-align: center;
+	line-height: 15px;
+	background-color: white;
+}
+.content a img{
+	width: 150px;
+	height:200px;
+	vertical-align: top;
+}
+
+/*PHAN FOOTER*/
+.total_footer{
+	width: 100%;
+	display: flex;
+	background-color: white;
+}
+ .button{
+ 	background-color: orange;
+ 	color: : white;
+ 	font-weight: bold;
+ 	height: 50px;
+ 	width: 50%;
+ 	border-radius: 5px;
+ 	margin-top: 18px;
+ 	margin-right: 40px;
+ 	border: none;
+ 	cursor: pointer;
+ 	float: right;
+
+ }
+
+.total_contact{
+	width: 100%;
+	background-color:white;
+	border: #f3f3f3 solid 1px;
+    font-weight: normal;
+
+}
+ .contact1{
+ 	width: 25%;
+ 	/*background-color: red;*/
+ 	list-style-type: none;
+ 	text-align: left;
+ 	line-height: 30px;
+ }
+  .contact2{
+ 	width: 25%;
+ 	/*background-color: yellow;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ }
+  .contact3{
+ 	width: 25%;
+ /*	background-color: green;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ }
+  .contact4{
+ 	width: 25%;
+ /*	background-color: pink;*/
+ 	list-style-type: none;
+ 	line-height: 30px;
+ }
+
+ .footer_finish{
+ 	width: 100%;
+ 	text-align: center;
+ 	color: #6d6d6d;
+ 	font-size: 12px;
+ 	/*padding: 15px;*/
+ 	line-height: 20px;
+ 	background-color: white;
+ }
+
+.tel{
+	position: fixed;
+	width: 10%; 
+	/*height: 10%;*/
+	background-color:orange;
+	border-radius: 5px;
+	text-align: center;
+	padding: 5px;
+	float: right;
+
+	top: 500px;
+	left: 90%;
+}

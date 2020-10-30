@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+	.container{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.main_one{
+		width: 100%;
+		border: thin solid #1a8cff;
+	}
+
+	.header{
+		width: 100%;
+		background-color: #1a8cff;
+		height: 40px;
+		color: white;
+		display: flex;
+	}
+
+	.body{
+		padding: 10px;
+	}
+
+
+	.main_one .input{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 10px;
+		border: thin solid grey;
+	}
+
+	.main_one .addproduct{
+		background-color: #4dff4d;
+		border: none;
+		border-radius: 5px;
+		height: 30px;
+
+	}
+
+	.main_one .reset{
+		background-color: #4dff4d;
+		border: none;
+		border-radius: 5px;
+		height: 30px;
+	}
+
+
+	.main_two{
+		width: 100%;
+		border: thin solid #1a8cff;
+	}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="main_one">
+		<div class="header"><h5 style="margin-left: 10px; margin-top: 10px;">Input product's detail Information</h5></div>
+		<div class="body">
+		<div>
+			<div style="font-weight: bolder;">Product Name</div>
+			<div><input class="input" type="text" name="productname" id="productname"></div>
+		</div>
+
+		<div>
+			<div style="font-weight: bolder;">Category Name</div>
+			<div>
+				<select class="input" id="selection">
+	
+				</select>
+				
+			</div>
+		</div>
+
+		<div>
+			<div style="font-weight: bolder;">Price</div>
+			<div><input class="input" type="text" name="productname" id="price" onchange="tinhgiatong()"></div>
+		</div>	
+
+		<div>
+			<div style="font-weight: bolder;">Quantity</div>
+			<div><input class="input" type="text" name="productname" id="quantity" onchange="tinhgiatong()"></div>
+		</div>
+
+		<div>
+			<div style="font-weight: bolder;">Total Price</div>
+			<div><input class="input" type="text" name="productname" id="total_price"></div>
+		</div>
+
+		<div>
+			<div style="font-weight: bolder;">Manufacturer Name</div>
+			<select class="input" onchange="choice()" id="manufacturer">
+					<option>--Nhà sản xuất</option>
+					<option value="Apple">Apple</option>
+					<option value="Samsung">Samsung</option>
+					<option value=lg>LG</option>
+					<option value="Sony">Sony</option>
+					<option value="Google">Google</option>
+
+			</select>
+
+		</div>
+
+		<div>
+			<button class="addproduct" onclick="addproduct()">Add Product</button>
+			<button class="reset">Reset</button>
+		</div>
+		</div>
+	</div>
+
+		<div class="main_two" style="margin-top: 20px;">
+		<div class="header"><h5 style="margin-left: 10px; margin-top: 10px;">Management Product</h5></div>
+		<div class="body">
+			<table border="1px">
+				<thead>
+				<tr>
+					<th>No</th>
+					<th >Product</th>
+					<th>Category Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Manufacturer Name</th>
+					<th colspan="2">Chức năng</th>
+					
+				</tr>
+				</thead>
+			
+				<tbody id="product_list">
+					
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function choice() {
+		var select = document.getElementById('manufacturer').value;
+		var a = document.getElementById('selection');
+
+		if (select=="Apple") {
+			a.innerHTML =  '<option>--Loại sản phẩm--</option><option>Iphone</option><option>Ipad</option><option>Ipod</option>'
+		}
+		
+		if (select=="Samsung") {
+			a.innerHTML =  '<option>--Loại sản phẩm--</option>' + '<option>SamsungGalaxy</option>' + '<option>Samsung Tab</option>'
+		}
+
+		if (select=="LG") {
+			a.innerHTML =  '<option>--Loại sản phẩm--</option>' + '<option>LG ThinQ</option>' + '<option>LG G</option>'
+		}
+
+		if (select=="LG") {
+			a.innerHTML =  '<option>--Loại sản phẩm--</option>' + '<option>Sony Xpreia</option>'
+		}
+
+		if (select=="Google") {
+			a.innerHTML =  '<option>--Loại sản phẩm--</option>' + '<option>Google SmartPhone</option>' + '<option>Google Smart Watch</option>'
+		}
+	}
+
+	function tinhgiatong() {
+		var price_tag = document.getElementById('price').value
+		var quantity_tag = document.getElementById('quantity').value
+		var total_price_tag = price_tag * quantity_tag
+		document.getElementById('total_price').value= total_price_tag
+	}
+
+	var count=1;
+	function addproduct(){
+		var a = document.getElementById('productname').value
+		var b = document.getElementById('selection').value
+		var c = document.getElementById('price').value
+		var d = document.getElementById('quantity').value
+		var e = document.getElementById('manufacturer').value
+		var add = document.getElementById('product_list')
+		add.innerHTML += `<tr>
+							<td>${count++}</td>
+							<td>${a}</td>
+							<td>${b}</td>
+							<td>${c}</td>
+							<td>${d}</td>
+							<td>${e}</td>
+							<td><button>Edit</button></td>
+							<td><button>Delete</button></td>
+
+						</tr>`
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

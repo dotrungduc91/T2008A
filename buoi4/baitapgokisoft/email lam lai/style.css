@@ -1,0 +1,82 @@
+body{
+background-color: rgb(255,255,240);
+}
+
+textarea{
+width: 90%;
+}
+
+.imgHelp{
+	cursor: help;
+	color: blue;
+	background-color: #FFFFDD;
+	right: 25%;
+	position: absolute;
+}
+
+.EmailEditor{
+	background-color: #FFFFDD
+	border: solid grey 1px;
+}
+
+#main{
+	width: 400px;
+	background-color: #DDFFEE;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+
+#help{
+	height: 500px;
+	width: 420px;
+	top: 10px;
+	background-color: #cfc;
+	color: #303030;
+	border: #E4E7E7 solid 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+	display: none;
+}
+
+.close{
+	text-align: right;
+	color: blue;
+	cursor: pointer;
+}
+
+ul{
+	list-style-image: url(bullet.jpg);
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.col-md-4{
+	width: 33.33%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+input{
+	width: 90%;
+}
+.col-md-8{
+	width: 66.67%;
+	float: left;
+	padding-right: 10px;
+}
+
+button{
+	float: left;
+	/*margin-right: 10px;
+	margin-bottom: 20px;*/
+	width: 50%;
+}

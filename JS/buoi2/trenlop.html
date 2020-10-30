@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr1 = [];
+		
+		arr1.push(12)
+		arr1.push(1)
+		arr1.push(22)
+
+		console.log(arr1.length);
+		console.log(arr1[2])
+
+		for (var i = 0; i < arr1.length; i++) {
+			console.log(">>>>" + arr1[i])
+		}
+
+		var arr2 = [1,5,2];
+		for (var i = 0; i < arr2.length; i++) {
+			console.log(arr2[i])
+		}
+
+
+		arr2.splice(1, 1);
+		arr2.push(9);
+			
+
+		arr2.splice(3,0,7,65,234,324)
+
+		for (var i = 0; i < arr2.length; i++) {
+			console.log(arr2[i])
+		}
+
+
+		arr2 = arr2.sort(function(a,b){
+			return a-b;
+		})
+
+		for(var i=0; i<arr2.length;i++){
+			console.log("---"+arr2[i])
+		}
+
+
+		var student = {
+			fullname: 'A',
+			age: 18,
+			address: 'hanoi'
+		}
+		document.write(student.age)
+		console.log(student)
+		console.log(student.fullname)
+		console.log(student.address)
+
+		student.fullname = 'BACxyx'
+		console.log(student.fullname)
+
+		var studentList = [
+			{
+			fullname: "A",
+			age: 18,
+			address: 'hanoi'
+			},  {
+			fullname: 'b',
+			age: 18,
+			address: 'hanoi'				
+			}
+		]
+		
+		
+
+		studentList.push(student.fullname)
+		console.log(studentList[1].fullname)
+document.write(studentList[1].fullname)
+
+		var a = [
+		1,
+		2,
+		{fullname: "A"}
+		]
+
+		console.log(a)
+
+		function showMessage(msg){
+			alert(msg)
+		}
+
+		showMessage("ABC")
+
+
+		function tinhtong(x,y) {
+			return x + y;
+		}
+
+		tong = tinhtong(5,8)
+		alert(tong)
+
+		str = "123456789345"
+
+		c = str.charAt(1)
+
+		alert(c)
+
+		str=str.concat("ABC")
+		alert(str)
+
+		index = str.lastindexof('345')
+		alert(index)
+
+
+
+
+
+	</script>
+</body>
+</html>
+

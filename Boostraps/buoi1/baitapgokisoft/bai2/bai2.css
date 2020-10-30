@@ -1,0 +1,33 @@
+.col-md-3 .nav-pills .nav-item a{
+	background-color: #1a1a1a;
+	color: white;
+}
+	
+}
+
+.row .col-md-3 .container-fluid .d-block{
+	height: 500px;
+}
+
+.jumbotron .col-md-3 li{
+	padding: 0px;
+	border: none;
+	background-color: #e9ecef;
+	text-align: left;
+}
+
+.jumbotron .col-md-2 li{
+	padding: 0px;
+	border: none;
+	background-color: #e9ecef;
+	text-align: left;
+}
+
+.nav-item  a{
+	color: black;
+
+}
+
+.test:hover{
+	background-color: yellow;
+}

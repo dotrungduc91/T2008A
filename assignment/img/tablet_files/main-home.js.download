@@ -1,0 +1,407 @@
+$(document).ready(function () {
+    let itemTip= 1;
+    function upAndFade() {
+     if(itemTip > 2) itemTip = 0;
+     $('.hot_tip .textwidget p').children().eq(itemTip).show().delay(5000).fadeOut();
+     itemTip++;
+     setTimeout(upAndFade, 5500);
+    }
+   upAndFade();
+    $('#top').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    });
+    var lazy = $("#sync1").find('.size-full').addClass("owl-lazy");
+    lazy.each(function(e){
+        this.classList.add('owl-lazy');
+        this.setAttribute('data-src',this.getAttribute('src'));
+        this.setAttribute('data-src-retina',this.getAttribute('src'));
+        this.removeAttribute('src');
+        this.removeAttribute('srcset');
+    })
+    var lazyYt = $(".dst_xuhuong").find('.size-medium').addClass("lazy");
+    lazyYt.each(function(e){
+        this.classList.add('owl-lazy');
+        this.setAttribute('data-original',this.getAttribute('src'));
+       
+        this.removeAttribute('src');
+        
+    })
+            var sync1 = $("#sync1"),
+                sync2 = $("#sync2"),
+                sync3 = $("#sync3"),
+                syncedSecondary = !0;
+
+            function syncPosition(n) {
+                var o = n.item.count - 1,
+                    e = Math.round(n.item.index - n.item.count / 2 - .5);
+                e < 0 && (e = o), o < e && (e = 0), sync2.find(".owl-item").removeClass("current").eq(e).addClass("current")
+            }
+
+            function syncPosition2(n) {
+                if (syncedSecondary) {
+                    var o = n.item.index;
+                    sync1.data("owl.carousel").to(o, 100, !0)
+                }
+            }
+            sync1.owlCarousel({
+                items: 1,
+                loop: !0,
+                margin: 10,
+                autoplay: !0,
+                lazyLoad: !0,
+                autoplayTimeout: 6e3,
+                autoplayHoverPause: !1,
+                nav: !0,
+                dots: !1
+            }).on("changed.owl.carousel", syncPosition), sync2.on("initialized.owl.carousel", function () {
+                sync2.find(".owl-item").eq(0).addClass("current")
+            }).owlCarousel({
+                items: 5,
+                margin: 0,
+                loop: !1,
+                autoplay: !1,
+                nav: !1,
+                dots: !1
+            }).on("changed.owl.carousel", syncPosition2), sync2.on("click", ".owl-item", function (n) {
+                n.preventDefault(), sync1.trigger("to.owl.carousel", [$(n.target).parents(".owl-item").index(), 300, !0])
+            });
+            //
+
+            //---------------owl home-new phu kien------------------------            
+           $('.owl-carousel').owlCarousel({
+                items:5,
+                loop:true,
+                margin:1,
+                dots: !1,
+                navText: ["<",">"],
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:false
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:false
+                    }
+                },
+                lazyLoad:true,
+                lazyLoadEager:1
+            })
+           // self.allAction();
+            $('#tmcp_select_1').change(function () {
+                showStore($(this).val());
+            });
+
+            $(".lazy").lazyload({
+                load: function () {
+                    this.style.opacity = 1;
+                    $(this).addClass("lazydone")
+                },
+                threshold: 100
+            });
+
+            if (getCookie("location") == "") {
+                var opt = $('#hd-location-text-a').val();
+                setCookie("location", opt, 30);
+               
+
+            } else {
+                $('#hd-location-text-a option').removeAttr("selected");
+                $('#hd-location-text-a option[value="' + getCookie("location") + '"]').attr("selected", "selected");
+               
+
+            }
+            $('#hd-location-text-a').on('change', function () {
+                location.reload(true);
+                setCookie("location", $(this).val(), 30);
+           
+
+            });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() != 0) {
+                    $('#top').fadeIn();
+                } else {
+                    $('#top').fadeOut();
+                }
+            });
+            $('#top').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+            /*======================================================*/
+
+            //end  25/11/2018 ************/
+
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toGMTString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            //------------------------
+
+            function formatPrice(str) {
+
+                if (str == null) {
+                    return '0';
+                }
+            
+                str = typeof str != 'string' ? str.toString() : parseFloat(str).toString();
+            
+                return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+            }
+            
+
+            $('.fs-stxt').keyup(function (e) {
+                if (e.which == 38 || e.which == 40) {
+                    var min = 0;
+                    var max = $('.fs-sremain ul li').length;
+                    var current = $('.fs-sremain ul li.active').index();
+                    if (current >= 0) {
+                        $('.fs-sremain ul li.active').removeClass("active");
+                    }
+                    switch (e.which) {
+                        case 38: //up
+                            if (current >= 0) {
+                                $('.fs-sremain ul li').eq(current - 1).addClass("active");
+                            } else {
+                                $('.fs-sremain ul li').eq(max - 1).addClass("active");
+                            }
+                            break;
+                        case 40: //down
+
+                            if (current >= 0) {
+                                $('.fs-sremain ul li').eq(current + 1).addClass("active");
+                            } else {
+                                $('.fs-sremain ul li').eq(min).addClass("active");
+                            }
+
+
+                            break;
+                        default:
+                            return;
+                    }
+                    return false;
+                }
+
+                e.preventDefault();
+                $keyword = $(this).val();
+
+                var searchResul = $('.fs-sremain ul');
+
+                var accessories = $('.fshop-search-acces');
+
+                if ($.trim($keyword).length > 0) {
+                    var result = "";
+                    var resultbrand = "";
+                    var resultold = "";
+                    var resultdischarge = "";
+                    var resultpromotion = "";
+                    var resultNews = "";
+                    var term = $.trim(decodeURI($keyword.replace(/!?\$|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\'| |\"|\&|\#|\[|\]|~/g, " ").replace("-", " ")));
+                    term = term.replace("điện thoại", "dien thoai");
+                    term = term.replace("dt", "dien thoai");
+                    term = term.replace("máy tính bảng", "may tinh bang");
+                    getDatafromElastic(term, resultNews, resultpromotion, result, searchResul, "* AND ");
+                } else {
+                    searchResul.html('');
+                }
+            })
+
+            function getDatafromElastic(strInput, resultNews, resultpromotion, result, searchResul, Condition) {
+                var term = strInput;
+                var data = {
+                    "s": strInput
+                };
+                $.ajax({
+                    url: 'https://didongthongminh.vn:2316/api/search',
+                    type: "POST",
+                    dataType: "TEXT",
+                    contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                    data: data,
+                    success: function (data) {
+                        //console.log(data);
+                        var dataarr = JSON.parse(data);
+                        //console.log(dataarr);
+                        if ((dataarr == '' || dataarr == null) && resultNews == '' && resultpromotion == '') {
+                            var href = "//didongthongminh.vn/?s=" + term + "&post_type=product";
+                            result = "<li><a href='" + href + "'>Hiển thị kết quả cho <b><i>" + term + "</i></b></a></li>";
+                        } else {
+                            if (term.toLowerCase().indexOf("samsung") > 0) {
+                                result += "<li><a href='//didongthongminh.vn/samsung' style='text-align: center;'><img src='/Content/Mobile/V4/images/ss-logo.png'></a></li>";
+                            }
+                            if (dataarr != '' && dataarr != null) {
+                                $.each(dataarr, function (i, v) {
+                                    if (v.sbtitle != '' && v.sbtitle != null) {
+                                        var sbtitle = ' <span class="dst_sbtitle">' + v.sbtitle + '</span>';
+                                    } else {
+                                        var sbtitle = '';
+                                    }
+                                    var t = '<h3>' + v.post_title.replace($keyword, "<strong>" + $keyword + "</strong>") + sbtitle + '</h3>';
+                                    var urlpic = '<img src="https://didongthongminh.vn/upload_images/' + v.linkanh + '" alt = "" >';
+                                    //var url = "" + v.linkurl + "";
+                                    var url = "//didongthongminh.vn/" + v.linkurl + "";
+
+                                    var price = '';
+
+                                    if (parseInt(v.gia) == '') {
+                                        price = '<p class="fshop-search-prodprice fshop-search-prodprice-nottrade">Tạm hết hàng</p>';
+                                    }
+                                    //v._source.id != 21781 &&
+                                    else if (parseInt(v.gia) > 0) {
+                                        price = '<p class="fshop-search-prodprice">' + formatPrice(parseInt(v.gia).toString()) + '₫</p>';
+                                    } else {
+                                        price = '<p class="fshop-search-prodprice"></p>';
+                                    }
+                                    result += "<li><a href='" + url + "'><p>" + urlpic + "</p><div >" + t + price + "</div></a>" + "</li>";
+                                });
+                            } else {
+                                result = "";
+                            }
+                        }
+                        searchResul.html(result);
+
+                        if (Condition == "* AND " && data.length == 0)
+                            getDatafromElastic(strInput, resultNews, resultpromotion, result, searchResul, "* OR ");
+                    }
+                });
+
+            }
+
+            $('.search-button').click(function (e) {
+                if ($('.fs-sremain ul li.active') != undefined && $('.fs-sremain ul li.active').index() >= 0) {
+                    window.location.href = $('.fs-sremain ul li.active a').attr('href');
+                    return false;
+                }
+                e.preventDefault();
+                var $s = $('body');
+                var keyword = '';
+                if ($s.width() <= 1040 && $s.width() > 625) {
+                    keyword = $('.fs-stxt').val().trim();
+                } else if ($s.width() <= 625) {
+                    keyword = $('.fs-stxt').val().trim();
+                } else if ($s.width() > 1040) {
+                    keyword = $('.fs-stxt').val().trim();
+                }
+
+                if (keyword == '') {
+                    alert('Bạn chưa nhập từ khóa tìm kiếm');
+                } else {
+                    if (window.location.href.indexOf("/tin-tuc") > 0) {
+                        keyword = "/tim-kiem/" + keyword + "/tin-tuc";
+                        if (typeof $('.keyword').attr('data-href') != 'undefined') {
+                            keyword = $('.keyword').attr('data-href');
+                        }
+
+                        window.location.href = keyword;
+                    } else {
+                        keyword = "/tim-kiem/" + keyword;
+                        if (typeof $('.fs-stxt').attr('data-href') != 'undefined') {
+                            keyword = $('.keyword').attr('data-href');
+                        }
+                        if (checkAccessories() == true) {
+                            keyword += "/phu-kien";
+                        }
+
+                        window.location.href = keyword.replace(/ /g, "-");
+                    }
+                }
+            });
+
+            function formatCurrency(a) {
+                var b = parseFloat(a).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1.").toString();
+                var len = b.length;
+                b = b.substring(0, len - 3);
+                return b;
+            }
+
+            function writeStringToPrice(f) {
+                var e = f.substr(0, f.length % 3);
+                var b = f.replace(e, "");
+                var d = b.length / 3;
+                var a = "";
+                for (var c = 0; c < d; c++) {
+                    group_of_three = b.substr(c * 3, 3);
+                    if (c == d - 1) {
+                        group_of_three = "000"
+                    }
+                    a += group_of_three;
+                    if (c != (d - 1)) {
+                        a += "."
+                    }
+                }
+                if (e.length > 0) {
+                    if (a != "") {
+                        return e + "." + a
+                    } else {
+                        return e
+                    }
+                } else {
+                    if (a != "") {
+                        return a
+                    } else {
+                        return ""
+                    }
+                }
+            }
+        $('.home .dst_xuhuong .wp-caption a').append('<span class = "player_button"></span>');
+
+        // ---------countdown time home-new ----------
+        var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+
+
+          // document.getElementById("dd").innerHTML = days
+        //   document.getElementById("hh").innerHTML = hours
+        //   document.getElementById("mm").innerHTML = minutes
+        //   document.getElementById("ss").innerHTML = seconds
+
+          // If the count down is finished, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+});

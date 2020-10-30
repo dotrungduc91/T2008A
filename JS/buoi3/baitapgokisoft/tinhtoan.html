@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<style type="text/css">
+
+		.row1{
+			background-color: blue;
+			text-align: left;
+			padding: 10px;
+		}
+
+		.row2{
+			background-color: white;
+			text-align: left;
+			padding: 10px;
+			display: flex;
+			
+		}
+
+		button{
+			background-color: green;
+			margin-left: 5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div style="border: 1px solid black">
+		<div class="row1">Giai phuong trinh bac 1</div>
+		<div class="row2">
+			<div><button onclick="nhapA()">Nhap gia tri A</button></div>
+			<div><button onclick="nhapB()">Nhap gia tri B </button></div>
+			<div><button onclick="displayresult()">In ket qua</button></div>
+		</div>
+	</div>
+</body>
+
+
+<script type="text/javascript">
+	
+function nhapA() {
+	a = prompt("nhap gia tri A")
+	a = parseInt(a)
+}
+
+function nhapB() {
+	 b = prompt("nhap gia tri B")
+	b = parseInt(b)
+
+}
+
+
+function displayresult() {
+	var x = a+b
+	alert(x)
+}
+
+</script>
+
+
+</html>

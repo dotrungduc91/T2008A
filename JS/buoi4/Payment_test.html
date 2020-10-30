@@ -1,0 +1,204 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.total{
+			background-color: #cce0ff;
+			margin: 0 auto;
+			width: 60%;
+			border: 1px grey solid;
+			padding: 10px;
+
+		}
+
+		.header{
+			background-color:  #9999ff;
+			border: thin grey solid;
+			margin-top: 10px;
+			width: 18%;
+		}
+
+		.main_one, .main_two{
+			width: 90%;
+			border: grey 1px solid;
+			padding: 5px;
+			margin-top: 30px;
+		}
+
+		.row{
+			display: flex;
+			border: #0066ff
+			padding: 2px;
+			margin-top: 3px;
+		}
+
+		.row_select{
+			margin-left: 10px;
+		}
+
+		.row_fill{
+			margin-left: 10px;
+			width: 20%;
+		}
+
+		.changecolor:focus{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="total">
+		<form>
+		<div class="header">Purchase Oder Form</div>
+		<div class="main_one">
+			<div style="margin-top: -10px; background-color: #cce0ff; width: 20% ">Product Information</div>
+			<div style="border: 1px solid #0066ff; padding: 3px;">
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Product</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<select required class="row_select, changecolor" id="product" onchange="changeProduct()" onchange="update_TotalPrice()"> 
+						<option value="">--Select--</option>
+					<!-- 	<option value="Comfort Sleeper">Comfort Sleeper</option>
+						<option value="Morgan Kids Bed">Morgan Kids Bed</option>
+						<option value="Entertainment Cabinet">Entertainment Cabinet</option> -->
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Unit Price ($)</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<input disabled required  class="row_fill, changecolor" type="number" name="" id="price">
+					</div>
+				</div>
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Quantity</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<input disabled required  class="row_fill, changecolor" type="number" name="" id="quantity" onkeyup="update_TotalPrice()">
+					</div>
+				</div>	
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Total price</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<input disabled required  class="row_fill, changecolor" type="number" name="" id="total_Price" >
+					</div>
+				</div>							
+
+			</div>
+		</div>
+
+		<div class="main_two">
+			<div style="margin-top: -10px; background-color: #cce0ff; width: 20% ">Shipping Information</div>
+			<div style="border: 1px solid #0066ff; padding: 3px;">
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Product</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<input required  class="row_fill, changecolor" type="text" name="">
+					</div>
+				</div>
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Shipping Addess</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<textarea class="changecolor" required  rows="5" style="width:80%; margin-left: 10px;"></textarea>
+					</div>
+				</div>
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Credit Card</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<select required  class="row_select, changecolor" onchange="update_CreditCard()"> 
+						<option>--Select--</option>
+						<option>Visa</option>
+						<option>Master Card</option>
+						<option>American Express</option>
+						</select>
+					</div>
+				</div>	
+
+				<div class="row">
+					<div style="width: 30%; border: 1px solid #0066ff">Credit Card Number</div>
+					<div style="width: 68%; border: 1px solid #0066ff; margin-left: 10px;">
+						<input id="Card1" disabled style="width: 10%" class="changecolor" required  class="row_fill" type="number" name="" pattern="[0-9]{1,4}">
+						<input id="Card2" disabled style="width: 10%"class="changecolor" required  class="row_fill" type="number" name="" pattern="[0-9]{1,4}">
+						<input id="Card3" disabled style="width: 10%"class="changecolor" required  class="row_fill" type="number" name="" pattern="[0-9]{1,4}">
+						<input id="Card4" disabled style="width: 10%" class="changecolor" required  class="row_fill" type="number" name="" pattern="[0-9]{1,4}">
+					</div>
+				</div>							
+
+			</div>
+		</div>
+
+		<div style="text-align: center; margin-top: 20px;">
+			<button type="Submit">Submit</button>
+			<button type="Reset">Reset</button>
+		</div>
+		</form>
+	</div>
+
+<script type="text/javascript">
+
+var productList = {
+	"Comfort Sleeper": "650",
+	"Morgan Kids Bed": "975",
+	"Entertainment Cabinet": "480"
+}
+
+	productTag = document.getElementById('product')
+	for(var key in productList){
+		productTag.innerHTML += `<option value='${key}'>${key}</option>`
+}
+
+
+
+
+// 	function changeProduct(){
+// 		document.getElementById('quantity').disabled = false
+// 		var product = document.getElementById('product').value
+// 		switch(product){
+// 			case '':
+// 				document.getElementById('price').value = 0
+// 				document.getElementById('quantity').value = 0
+// 				document.getElementById('total_Price').value = 0
+
+// 			case 'Comfort Sleeper':
+// 				document.getElementById('price').value = 650
+// 				break;
+
+// 			case 'Morgan Kids Bed':
+// 				document.getElementById('price').value = 975
+// 				break;
+
+// 			case 'Entertainment Cabinet':
+// 				document.getElementById('price').value = 480
+// 				break;
+// 		}
+// 	}
+
+//  function update_TotalPrice(){
+//  	var price = document.getElementById('price').value
+//  	var quantity = document.getElementById('quantity').value
+//  	totalPrice = price * quantity
+//  	document.getElementById('total_Price').value = totalPrice
+//  }
+
+// function update_CreditCard(){
+// 	document.getElementById('Card1').disabled = false
+// 	document.getElementById('Card2').disabled = false
+// 	document.getElementById('Card3').disabled = false
+// 	document.getElementById('Card4').disabled = false
+
+// }
+
+</script>
+
+</body>
+</html>
