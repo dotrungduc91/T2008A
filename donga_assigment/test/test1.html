@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+<style type="text/css">
+	.total{
+		width: 50%;
+	}
+
+.picture img{
+	width: 100%;
+	transition-duration: 2s;
+	height: 200px;
+}
+.picture {
+
+	transition-duration: 2s;
+}	
+
+</style>
+
+</head>
+<body>
+	<div class="total">
+		<div class="picture" id="slide_show">
+			<img  class="img_slide" src="1.jpg">
+			<img class="img_slide" src="2.jpg">
+			<img  class="img_slide" src="3.jpg">
+			<img class="img_slide" src="4.jpg">
+		</div>
+		<div>
+			<button onclick="change_back()">Back</button>
+			<button onclick="change_next()">Next</button>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+var list= document.getElementsByClassName('img_slide')
+
+MoveSlide(0)
+
+count = 0
+
+function change_next(){
+	count ++
+	if(count > list.length-1){
+		count = 0;
+	}
+	MoveSlide(count)
+}
+
+function change_back(){
+	count --
+	if(count < 0){
+		count = list.length-1 ;
+	}
+	MoveSlide(count)
+}
+
+
+function MoveSlide(n) {
+	for (var i = 0; i < list.length; i++) {
+		list[i].style.display = "none"
+	}
+	 	list[n].style.display = "block"
+}
+
+// function MoveSlide_auto(n) {
+// 	for (var i = 0; i < list.length; i++) {
+// 		list[i].style.display = "none"
+// 	}
+
+	
+// 	 	list[i].style.display = "block"
+// }
+
+
+	setInterval(change_next, 1000)
+
+
+
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+	background-color: grey;
+}
+
+.navbar .navbar-collapse li{
+	border-left: thin solid grey;
+}
+
+.navbar .navbar-collapse ul{
+	margin: 0 auto;
+}
+
+.container .col-md-3  a{
+	margin-top: 5px;
+}
+
+.container .col-md-3  .card{
+	width: 100% !important;
+}
+
+.col-md-9 .row .col-md-3 {
+	text-align: center;
+	font-size: 15px;
+	}
+
+.col-md-9 .row ..col-md-3 img{
+	width: 100%;
+}

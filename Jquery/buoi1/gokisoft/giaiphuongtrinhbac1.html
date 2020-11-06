@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giai phong trinh bac nhat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div style="width: 60%; margin: 0 auto">
+		<div class="card">
+		  <div class="card-header bg-primary">Giai Phuong Trinh Bac 1: ax+b=0</div>
+		  <div class="card-body">
+		 	<button type="button" class="btn btn-success" id="nhapA">Nhap gia tri a</button>
+		 	<button type="button" class="btn btn-success" id="nhapB">NHap gia tri b</button>
+			 <button type="button" class="btn btn-success" id="result">In ket qua</button>
+		  </div>
+	</div>
+
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$('#nhapA').click(function(){
+				a = prompt("nhap gia tri a")
+			})
+
+			$('#nhapB').click(function(){
+				b = prompt('nhap gia tri b')
+			})	
+
+			$('#result').click(function(){
+				result = -b/a;
+				alert("Ket qua nghiem x =" + result)
+			})
+
+
+			
+		})
+
+
+
+	</script>
+</body>
+</html>

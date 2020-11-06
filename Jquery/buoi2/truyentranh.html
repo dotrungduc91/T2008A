@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thao tác tag bằng jQuery</title>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="truyentranh.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Truyen cuoi</a>
+							<a class="dropdown-item" href="#">Truyen 18+</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Cadao</a>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Truyen cuoi</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tho</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cadao</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Truyen ngan</a>
+					</li>
+
+
+				</ul>
+
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"> <!-- PHAN MENU  RIGHT START -->
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-action">Truyen ngan</a>
+						<a href="#" class="list-group-item list-group-item-action" style="background-color: red">Truyen ma</a>
+						<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Truyen trinh tham</a>
+						<a href="#" class="list-group-item list-group-item-action list-group-item-success">Truyen tranh</a>
+						<a href="#" class="list-group-item list-group-item-action list-group-item-danger">Truyen co tich</a>
+						<a href="#" class="list-group-item list-group-item-action list-group-item-warning">Truyen nguoi lon</a>
+					</div>
+					
+				</div> <!-- PHAN MENU  RIGHT ENd -->
+				<div class="col-md-9">
+					<div class="row" id="fill_data"> <!-- TOTAL TRUYEN -->
+ 
+					</div>  <!-- TOTAL END -->
+					<form method="post" onsubmit="return saveData()">
+					<div class="row" style="margin-top: 15px;">
+						<div style="width: 60%; margin: 0 auto">
+							<label for="usr">Tieu de:</label>
+							<input style="width: 80%; float: right;" type="text" id="title">
+						</div>
+												<div style="width: 60%; margin: 0 auto">
+							<label for="usr">Link hinh anh:</label>
+							<input style="width: 80%; float: right;" type="text" id='thumnail'>
+						</div>
+
+						<div style="width: 60%; margin: 0 auto">
+							<label for="usr">Luot vote:</label>
+							<input style="width: 80%; float: right;" type="text" id="vote_quantity">
+						</div>
+						<div style="width: 60%; margin: 0 auto">
+							<label for="usr">Luot xem:</label>
+							<input style="width: 80%; float: right;" type="text" id="view_quantity">
+						</div>
+							<div style="width: 60%; margin: 0 auto">
+							<button type="submit" onclick="addData()">Them</button>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+
+	</div> <!-- container-fluid -->
+
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(function() {
+			
+		})
+
+		var ProductList =[]
+
+		function addData(){
+			thumnail = $('#thumnail').val()
+			title = $('#title').val()
+			vote = $('#vote_quantity').val()
+			view = $('#view_quantity').val()
+
+		var product = {
+			'thumnail': thumnail,
+			'title': title,
+			'vote': vote,
+			'view': view,
+		}
+
+			ProductList.push(product)
+
+
+			$('#fill_data').html('')
+			for(i=0; i < ProductList.length; i++){
+				$('#fill_data').append(`<div class="col-md-3">
+							<div class="card" style="width: 18rem;">
+								<img class="card-img-top" src="${ProductList[i].thumnail}" alt="Card image cap">
+								<div class="card-body">
+									<p style="font-weight: bold;" class="card-title">${ProductList[i].title}</p>
+									<p class="card-text">Luotxem: ${ProductList[i].view}</p>
+									<p class="card-text">Luotvote: ${ProductList[i].vote}</p>
+								</div>
+							</div>
+						</div>`)
+			}
+			
+			localStorage.setItem ('ProductList_db', ProductList)
+				return false
+				
+		}
+
+	</script>
+</body>
+</html>

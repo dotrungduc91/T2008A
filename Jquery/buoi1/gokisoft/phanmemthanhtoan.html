@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="thanhtoan.css">
+</head>
+<body>
+	<!-- HEADER START-->
+	<div style="width: 100%">
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			</form>
+
+
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-left: 24%">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Báo cáo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Quản lý</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Nhập kho</a>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Cửa hàng<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<select class="form-control" id="sel1">
+							<option>Kho 1</option>
+							<option>Kho 2</option>
+							<option>Kho 3</option>
+							<option>Kho 4</option>
+						</select>
+					</li>
+				</ul>
+			</div> 
+		</nav>
+	</div> <!-- HEADER END-->
+
+	
+	<!-- MAIN START -->
+	<div class='container-fluid'>
+		<div class="row">
+			<div class="col-md-5 mainleft">   <!-- MAIN LEFT START -->
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-secondary">Mẫu đơn 1</button>
+					<button type="button" class="btn btn-secondary">Mẫu đơn 2</button>
+					<button type="button" class="btn btn-secondary">Mẫu đơn 3</button>
+					<button type="button" class="btn btn-secondary" style="background-color: orange; margin-left: 5%;">????</button>
+				</div>
+
+				<div class="nhapdulieu"> <!-- BANG THANH TOAN START -->
+					<table class="table table-bordered table-hover">   <!-- BANG NHAP SO LIEU -->
+						<thead>
+							<tr>
+								<th scope="col">STT</th>
+								<th scope="col">Imagine</th>
+								<th scope="col">Title</th>
+								<th scope="col">Price</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Total_price</th>
+							</tr>
+						</thead>
+						<tbody id="product_added_table">
+
+						</tbody>
+					</table>					
+				</div>
+
+				<div class="tinhtoan">       <!-- BANG TÍNH TOAN -->
+					<div class="row">
+						<div style="text-align: center; padding: 0px;" class="col-md-3">
+							<button style="margin-top: 40px;" type="button" class="btn btn-primary">Thanh toán</button>
+							<button style="margin-top: 10px;" type="button" class="btn btn-primary">Ghi chú</button>
+						</div>
+						<div class="col-md-7" style="padding: 5px;">
+							<form>
+								<input style="width: 121%" type="text" placeholder="Nhập tên hoặc số điện thoại khách hàng">
+
+								<div class="form-group row">
+									<label class="col-md-6 col-form-label">Tiền hàng</label>
+									<div class="col-md-6">
+										<input disabled="" type="number" id="tienhang">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-6 col-form-label">Giảm giá</label>
+									<div class="col-md-6">
+										<input onkeyup="tinhtien()" type="number"  id="giamgia" placeholder="Nhập...">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-6 col-form-label">Khách đưa</label>
+									<div class="col-md-6">
+										<input type="number"  id="khachdua" onkeyup="tinhtien()" placeholder="Nhập...">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label  class="col-md-6 col-form-label">Tiền thừa</label>
+									<div class="col-md-6">
+										<input disabled type="number"  id="tienthua" placeholder="">
+									</div>
+								</div>
+							</form>
+
+							<div style="margin-left: 0 auto" class="btn-group" role="group" aria-label="Basic example">
+								<button type="button" class="btn btn-secondary bg-secondary">HỦY</button>
+								<button type="button" class="btn btn-secondary bg-primary">LƯU</button>
+								<button type="button" class="btn btn-secondary bg-warning">LƯU & IN</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>                    <!-- MAIN LEFT END -->
+
+
+			<!-- MAIN RIGHT START -->
+			<div class="col-md-7 mainright">
+				<div class="input-group">
+					<select class="custom-select" id="inputGroupSelect04">
+						<option selected>Tất cả...</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary bg-primary" type="button">Hàng mới</button>
+					</div>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary bg-primary" type="button">Bán chạy</button>
+					</div>
+				</div>
+				<div class="total_sanpham">
+					<div style="width: 95%; margin: 0 auto; margin-top: 10px;" id="load_total_sanpham">      <!-- SAN PHAM Hang 1-->
+
+
+
+
+
+					</div>	
+
+
+				</div>
+
+				<!-- FOOTER MAIN RIGHT START-->
+				<div style="margin-left: 11%" class="card bg-secondary">
+					<div class="card-body text-center">
+						<p class="card-text">1</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-center">
+						<p class="card-text">2</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-center">
+						<p class="card-text">3</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-center">
+						<p class="card-text">4</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-center">
+						<p class="card-text">5</p>
+					</div>
+				</div>
+				
+			</div> <!-- MAIN RIGHT END -->
+		</div>
+	</div> <!-- MAIN END -->
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		var product_List = [
+		{'thumnail': 'caingot.png','title':'caingot','price': '20000'},
+		{'thumnail': 'dauhalan.jpg','title':'dauhalan','price': '30000'},
+		{'thumnail': 'duahau.jpg','title':'duahau','price': '7000'},
+		{'thumnail': 'nho.jpg','title':'nho','price': '50000'},
+		{'thumnail': 'cam.jpg','title':'cam','price': '40000'},
+		{'thumnail': 'xoaikho.png','title':'xoaikho','price': '80000'},
+		]
+
+
+
+		$(function (){
+			loadData()
+		})
+
+
+		product_Added=[]
+
+		function loadData(){
+			for (i=0; i < product_List.length; i++) {
+				$('#load_total_sanpham').append(`<div class="sanpham">
+					<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="${product_List[i].thumnail}" alt="Card image cap">
+					<div class="card-body">
+					<p class="card-text">${product_List[i].title}</p>
+					<p class="card-text">${product_List[i].price}</p>
+					<button onclick="add_item(${i})">Thêm vào giỏ hàng</button>
+					</div>
+					</div>
+					</div>`)
+			}
+		}
+		
+		function add_item(index){
+			if(product_Added[index] == undefined){
+				product_Added[index] = {
+					'thumnail': product_List[index].thumnail,
+					'title': product_List[index].title,
+					'price': product_List[index].price,
+					'quantity': 1,
+				} 
+			} else{
+				product_Added[index].quantity++
+			}
+
+
+			console.log(product_Added)	
+			
+			count = 0
+			$('#product_added_table').html('')
+			for (i = 0; i < product_Added.length ; i++) {
+				p = product_Added[i]
+
+				if (product_Added[i] == undefined) {
+					continue;
+				} else{
+					$('#product_added_table').append(`<tr>
+						<th scope="col">${++count}</th>
+						<th scope="col"><img style="width:20%" src="${p.thumnail}"></th>
+						<th scope="col">${p.title}</th>
+						<th scope="col">${p.price}</th>
+						<th scope="col">${p.quantity}</th>
+						<th scope="col">${p.quantity * p.price}</th>
+						</tr>`)
+
+				}
+			}
+			total = 0
+			for (i = 0; i < product_Added.length ; i++){
+
+				if (product_Added[i] == undefined) {
+					continue;
+				} else{
+					
+					
+					 total= total + product_Added[i].quantity * product_Added[i].price
+					$('#tienhang').val(total)
+
+				}
+			}
+			
+		}
+
+		function tinhtien(){
+		tienkhachdua=$('#khachdua').val()
+		giamgia = $('#giamgia').val()
+		giamgia = eval(giamgia)
+		tienthua = tienkhachdua - $('#tienhang').val() +  giamgia
+		$('#tienthua').val(tienthua)
+	}
+
+	</script>
+</body>
+</html>

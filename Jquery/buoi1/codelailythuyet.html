@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registation Form * Form Tutorial</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Registation Form - Input User's Detail Information</h2>
+			</div>
+			<div class="panel-body">
+				<div class="form-group" id="div1">
+				  <label for="usr">Name:</label>
+				  <input required="true" type="text" class="form-control" id="usr" style="background-color: grey; size: 18px">
+				</div>
+				<div class="form-group" id="div2">
+				  <label for="email">Email:</label>
+				  <input required="true" type="email" class="form-control" id="email">
+				</div>
+				<div class="form-group" id="div3">
+				  <label for="birthday">Birthday:</label>
+				  <input type="date" class="form-control abc" id="birthday">
+				</div>
+				<div class="form-group" id="div4">
+				  <label for="address">Address:</label>
+				  <input type="text" class="form-control" id="address">
+				</div>
+				<button class="btn btn-success" id="register_button">Register</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			document.getElementById('usr').value = 1234567
+			$('#email').val('tranvandiep@gmail.com')
+			console.log($('#email').val())
+			console.log($('#email').attr('type'))
+			$('#email').css('background-color', 'yellow')
+			$('#email').css('color', 'red')
+			$('.form-control').val('123')
+
+			 var inputList = $('.form-control')
+			 	for (i=0; i<inputList.length; i++) {
+			 		console.log(i)
+			 	}
+			 $('.form-control').css('background-color','pink')
+			 $('label').css('background-color', 'yellow')
+			$('[for = address]').css('color','red')
+			$('[type = date]').css('color','orange')
+			$('#div1 .form-control').css('background-color', 'red')
+
+			$('button').css('background-color','red')
+
+			$('#register_button').click(function(){
+				console.log('ac')
+				name = $('#usr').val()
+				email = $('#email').val()
+				birthday = $('#birthday').val()
+				address = $('#address').val()
+				console.log(address)
+
+			})
+
+
+
+
+
+
+
+
+		})
+
+
+
+	</script>
+</body>
+</html>

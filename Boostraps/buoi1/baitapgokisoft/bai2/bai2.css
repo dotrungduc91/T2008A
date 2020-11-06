@@ -5,8 +5,8 @@
 	
 }
 
-.row .col-md-3 .container-fluid .d-block{
-	height: 500px;
+img.img-item{
+	height: 170px !important;
 }
 
 .jumbotron .col-md-3 li{

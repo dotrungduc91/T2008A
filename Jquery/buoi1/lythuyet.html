@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registation Form * Form Tutorial</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Registation Form - Input User's Detail Information</h2>
+			</div>
+			<div class="panel-body">
+				<div class="form-group" id="div1">
+				  <label for="usr">Name:</label>
+				  <input required="true" type="text" class="form-control" id="usr" style="background-color: grey; size: 18px">
+				</div>
+				<div class="form-group" id="div2">
+				  <label for="email">Email:</label>
+				  <input required="true" type="email" class="form-control" id="email">
+				</div>
+				<div class="form-group" id="div3">
+				  <label for="birthday">Birthday:</label>
+				  <input type="date" class="form-control abc" id="birthday">
+				</div>
+				<div class="form-group" id="div4">
+				  <label for="address">Address:</label>
+				  <input type="text" class="form-control" id="address">
+				</div>
+				<button class="btn btn-success" id="register_button">Register</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		var userList = []
+
+		// $(document).ready(function() {
+
+		// })
+		//$ => jQuery >= 3. => <3 => thay $ => jQuery
+		$(function() {
+			//thuc hien xu ly khoi code nay.
+			document.getElementById('usr').value = '123456'
+			//Phan 1: Thao tac tag
+			//thao tac dua tren id
+			$('#email').val('tranvandiep.it@gmail.com')
+			//gia tri => val() => input
+			console.log($('#email').val())
+			//attribule => tat ca cac tag
+			console.log($('#email').attr('type'))
+			console.log($('#email').attr('class'))
+			console.log($('#email').attr('id'))
+			console.log($('#email').attr('required'))
+			//checked, required, disable, editable => dac biet => get & set => cach cu the rieng => tra cuu. =>prop
+			// $('#email').attr('type', 'text')
+			//css => tat ca cac tag
+			$('#email').css('background-color', 'yellow')
+			$('#email').css('color', 'red')
+
+			//thao tac dua tren class
+			$('.form-control').val(123)
+			var inputList = $('.form-control')
+			for (var i = 0; i < inputList.length; i++) {
+				console.log(i)
+			}
+			$('.form-control').css('background-color', 'pink')
+
+			$('label').css('background-color', 'yellow')
+
+			$('[for=address]').css('color', 'blue')
+			$('[for=address]').css('font-weight', 'bold')
+
+			$('[type=date]').css('background-color', 'black')
+
+			jQuery('button').css('background-color', 'red')
+
+			$('#div3 .form-control').css('background-color', 'red')
+
+			//bat su kien
+			$('#register_button').click(function() {
+				//click button => xu ly khoi code o day
+				console.log('click...')
+				name = $('#usr').val()
+				email = $('#email').val()
+				birthday = $('#birthday').val()
+				address = $('#address').val()
+				
+
+				console.log(address)
+			})
+		})
+
+		function addUser() {
+			//binh thuong
+		}
+	</script>
+</body>
+</html>
