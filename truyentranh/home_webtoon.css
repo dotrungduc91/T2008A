@@ -1,0 +1,300 @@
+body{
+	background-color: #ebebeb;
+}
+
+/*HEADER*/
+.header{
+	background-image: url(img/header.jpg);
+	width: 100%;
+	
+}
+
+/*THANH MENU*/
+.menu{
+	background: #ebebeb;
+}
+
+.menu ul li{
+	border-right: thin solid #b1cdcd;
+}
+
+.menu a{
+	border-left: thin solid #f0f5f5;
+	font-size: 15px;
+	color: black;
+}
+
+.menu a:hover{
+	background: white;
+}
+
+.sub_menu1, .sub_menu2{
+	display: none;
+	z-index: 100;
+	position: absolute;
+
+}
+
+.menu ul li:hover .sub_menu1{
+	display: block;
+}
+
+.menu ul li:hover .sub_menu2{
+	display: block;
+}
+
+.sub_menu1 li{
+	width: 25%;
+}
+
+.sub_menu2 li{
+	width: 50%;
+}
+
+
+/*TOTAL MAIN*/
+
+
+.total_main{
+	background-color: white;
+}
+
+/*SLIDE BAR*/
+.list_run{
+	width: 10% !important;
+	padding: 5px;
+	/*background-color: pink;
+	*/
+}
+
+.list_run img{
+	width: 100%;
+	height: 250px;
+	
+}
+
+.list_run .card-img-overlay{
+position: absolute; top: 80%;
+padding: 0px 5px;
+	color: white;
+
+	
+
+}
+
+.list_run .card-img-overlay span{
+	font-size: 12px;
+
+}
+
+.list_run .card-img-overlay p{
+	margin-bottom: 0px;
+}
+
+
+/*CHAY LIST TRUYEN*/
+#total_list_run{
+	overflow: hidden;
+	/*width: 100%;*/
+	
+	
+}
+
+
+#total_list_expand{
+	
+	display: flex;
+	width: 200%;
+	transition-duration: 1s;
+	
+}
+
+.carousel-control-next-icon{
+	color: black;
+}
+
+.carousel-control-next, .carousel-control-prev{
+	color: black;
+}
+
+.fa-angle-left{
+	position: absolute;
+	top: 35%; left: 9%;
+	z-index: 150;
+	color: white;
+}
+
+.fa-angle-right{
+	position: absolute;
+	top: 35%; right: 9%;
+	z-index: 150;
+	color: white;
+}
+
+.main{
+	display: flex;
+}
+/*TRUYEN MOI CAP NHAT - MAIN LEFT*/ 
+
+.main_left{
+	width: 66.66%;
+	/*float: left;*/
+}
+
+.main_left .row{
+	margin: 0px;
+}
+
+.main_left .card-img-overlay{
+	padding: 0px;
+	font-size: 12px;
+	color: white;
+	background-color: black;
+	opacity: 0.7;
+	height: 10%;
+	position: absolute; top :90%;
+	text-align: center;
+}
+
+.main_left .col-md-3{
+	padding: 5px 5px;
+	
+}
+
+.main_left .col-md-3  .card  {
+	border: none;
+}
+
+
+.main_left .col-md-3  .card  img{
+	height: 250px;
+}
+
+
+.main_left .col-md-3  .card  .card-body{
+	padding: 5px 5px;
+}
+
+.main_left .col-md-3  .card  .card-body a{
+	font-size: 12px;
+	color: black;
+	display: block;
+	text-decoration: none;
+}
+
+.main_left .col-md-3  .card  .card-body a:hover{
+	color: blue;
+}
+.main_left .col-md-3  .card  .card-body span{
+	color: silver;
+	float: right;
+}
+
+/*MAIN RIGHT*/
+.main_right{
+	width: 33.33%;
+	padding: 5px 15px;
+}
+
+.main_right .row{
+	margin: 0px;
+	padding: 10px 0px;
+	border-bottom: #e0ebeb thin solid
+}
+ 
+
+
+.main_right .top_total .top_total_title a{
+text-decoration: none;
+	color: black;
+	width: 33.33%;
+}
+
+
+.main_right .top_total .top_total_title li{
+	padding-top: 10px;
+	padding-bottom: 10px;
+		background-color: #ecf0f1;
+		border: none;
+		border-radius: 0px;
+		border-top: 2px #ecf0f1 solid;
+		text-align: center;
+}
+
+.main_right .top_total .top_total_title .active{
+	padding-top: 10px;
+	padding-bottom: 10px;
+		background-color: white;
+		color: black;
+		border-top: 2px solid purple;
+		
+}
+
+/*.main_right .top_total .top_total_title a:hover{
+		border-top: 2px solid purple;
+}*/
+
+.main_right .col-md-2 {
+	padding: 0px;
+	text-align: center;
+
+}
+
+.main_right .col-md-8 {
+	padding: 0px;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.main_right .col-md-2 img{
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+}
+.main_right .col-md-2 p{
+	margin: 0px;
+	margin-top: 20%;
+}
+
+.main_right .top_total {
+	border: thin solid #ecf0f1;
+}
+
+.main_right .top_total a{
+	font-size: 14px;
+	color: black;
+}
+
+
+/*BINH LUAN*/
+
+.comment_total{
+	overflow-y: scroll;
+	height: 530px;
+	border-bottom: thin solid #ecf0f1;
+}
+
+.commment{
+	border: thin solid #ecf0f1;
+	font-size: 13px;
+}
+
+.comment_title{
+	padding: 5px;
+}
+
+.comment_title a {
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+}
+
+
+.comment_content img{
+	width: 100%;
+}
+ 
+
+

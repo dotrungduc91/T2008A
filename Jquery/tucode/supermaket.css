@@ -1,0 +1,152 @@
+
+
+/*MAIN LEFT*/
+.mainleft{
+	padding: 10px;
+	/*border: thin solid red;*/
+}
+
+.mainleft .btn-group{
+	width: 100%;
+
+}
+
+.mainleft .btn-group button{
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+.btn-secondary{
+	background-color: white;
+	color: black;
+	border: #dee2e6 solid 1px;
+}
+.nhapdulieu{                   /*BANG NHAP SO LIEU*/
+height: 350px;
+border: thin yellow solid;
+overflow-y: scroll;
+padding-top: 10px;
+font-size: 12px;
+}
+
+.table-bordered input{
+	width: 100%;
+	border: thin solid #dee2e6;
+}
+.table-bordered th{
+	padding: 1px;
+}
+
+.table-bordered th input{
+	height: 50px;
+}
+
+
+.tinhtoan{
+	background-color: grey;
+	height: 180px;
+}
+
+
+/*BANG THANH TOAN*/
+.tinhtoan{
+	font-size: 12px;
+}
+
+.tinhtoan button{
+	font-size: 12px;
+}
+
+.col-md-7 .form-group{
+	margin: 0px;
+
+}
+
+.col-md-7 .col-md-6 input{
+	width: 100%;
+	font-size: 12px;
+}
+
+.col-md-7 .btn-group button{
+	height: 20px;
+	padding: 0px;
+	margin-top: 2px;
+}
+
+/*<!-- MAIN RIGHT  -->*/
+.mainright{
+	overflow-y: scroll;
+	/*background-color: red;*/
+}
+
+.total_sanpham{
+overflow-y: scroll;
+height: 500px;
+/*background-color: pink;*/
+}
+
+.mainright .input-group{
+	width: 70%;
+	margin-top: 10px;
+}
+
+.mainright .input-group-append button{
+	color: white;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	border-radius: 0px;
+
+}
+
+.mainright .input-group select{
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 0px;
+}
+
+.sanpham{
+	width: 20%;
+/*	background-color: red;*/
+	text-align: center;
+	float: left;
+}
+
+.sanpham img{
+	width: 100%;
+	height: 100px;
+}
+
+
+.sanpham .card{
+	width: 100% !important;
+	font-size: 12px;
+	line-height: 10px;
+	border: none;
+}
+.sanpham .card-body{
+	padding: 0px;
+	padding-bottom: 10px;
+}
+
+.card-img-top{
+	width: 100%;
+	height: 80px;
+}
+
+/*<!-- FOOTER MAIN RIGHT -->*/
+
+.bg-secondary{
+	padding: 0px;
+	width: 15% !important;
+	margin-top: 10px;
+	text-align: center;
+	display: inline-table;
+}
+.bg-secondary .card-body{
+	padding: 0px;
+	/*width: 100% !important;*/
+}

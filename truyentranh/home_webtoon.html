@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WEBTOON</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="home_webtoon.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- HEADER -->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center header">
+		<a class="navbar-brand" href="#"><img style="width: 99%; margin-right: 15%;" src="http://st.truyenchon.com/data/logos/logo-nettruyen.png"></a>
+		<form style="width: 40%" class="form-inline" action="/action_page.php">
+			<div style="width: 100%" class="input-group">
+				<div style="width: 90%"  class="input-group-prepend ">
+					<input style=" width:100% ; border-radius: 0px;" type="text" class="form-control" placeholder="Tim truyen...">
+				</div>
+				<span style="background-color: white; border-radius: 0px;" class="input-group-text"><i class="fa fa-search"></i></span>
+			</div>
+		</form>
+		<i style="color: white; font-size: 30px; margin-left: 5%" class="fa fa-comment"></i>
+
+		<!-- Links -->
+		<ul class="navbar-nav " style="margin-left: 5%;">
+			<li class="nav-item">
+				<a style="color: white; padding-right: 0px; " class="nav-link" href="#">Đăng nhập</a>
+			</li>
+			<li class="nav-item">
+				<a style="color: white" class="nav-link" href="#">/Đăng ký</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<!-- THANH MENU -->
+	<div class="container-fluid menu" >
+		<ul class="nav nav-tabs justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link " href="#"><i style="font-size: 16px;" class="fa fa-home hidden-xs"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">HOT</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">THEO DÕI</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">LỊCH SỬ</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">THỂ LOẠI</a>
+				<div class="sub_menu1">
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Truyện ma</li>
+						<li class="list-group-item">Tryện cổ tích</li>
+						<li class="list-group-item">Truyện ngụ ngôn</li>
+						<li class="list-group-item">Truyện 18+</li>
+					</ul>
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Truyện trinh thám</li>
+						<li class="list-group-item">Truyện tình cảm</li>
+						<li class="list-group-item">Truyện tâm lý</li>
+						<li class="list-group-item">Truyện viễn tưởng</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">XẾP HẠNG</a>
+				<div class="sub_menu2">
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Top All</li>
+						<li class="list-group-item">Truyện Full</li>
+					</ul>
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Top tháng</li>
+						<li class="list-group-item">Yêu thích</li>
+					</ul>
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Top tuần</li>
+						<li class="list-group-item">Mới cập nhật</li>
+					</ul>
+					<ul class="list-group list-group-horizontal">
+						<li class="list-group-item">Top ngày</li>
+						<li class="list-group-item">Truyện mới</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">TÌM TRUYỆN</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">CON GÁI</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">CON TRAI</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">GROUP</a>
+			</li>
+		</ul>
+	</div><!--  MENU END -->
+
+	<!-- TOTAL MAIN  START -->
+	<div class="container total_main">
+		<div style="font-size: 20px; color:  #2980b9">TRUYỆN ĐỀ CỬ ></div>
+		<div id="total_list_run" >
+			<div id="total_list_expand" >
+				<div class="card list_run" id = "element_list_run">
+					<img class="card-img-top" src="img/example.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/97/trung-sinh-do-thi-thien-ton.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/232/cuc-pham-diem-la-he-thong.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/186/su-tro-lai-cua-phap-su-vi-dai-sau-4000-n-7868.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/125/dieu-thu-cuong-y.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/209/trong-sinh-bat-kha-chien-bai.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="card list_run">
+					<img class="card-img-top" src="http://st.truyenchon.com/data/comics/103/quy-luat-tinh-yeu-o-mat-the.jpg" alt="Card image">
+					<div class="card-img-overlay">
+						<div style="background: black; opacity: 0.7">
+							<p>Trùng Sinh Đô Thị</p>
+							<p><span>Chapter 154</span><span><i style="margin-left: 20%" class="fa fa-clock"></i>2 ngày trước</span></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<i style="font-size: 50px;" onclick="move_list_down()" class="fa fa-angle-left"></i>
+			<i  style="font-size: 50px;" onclick="move_list_up()" class="fa fa-angle-right"></i>
+		</div>  <!-- SLIDE BAR END -->
+
+		<div style="font-size: 20px; color:  #2980b9">TRUYỆN MỚI CẬP NHẬT ></div>
+		<div class="main">
+			<div class="main_left">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card">
+								<!-- <i style="position: absolute; left: 50%" class="far fa-eye"></i> -->
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/86/van-co-de-nhat-te.jpg" alt="Card image">
+								<div class="card-img-overlay">
+
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" >Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" >Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" >Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/16/nhat-dang-gia-dinh.jpeg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/234/yeon-lok-heun.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/21/sekai-saikyou-no-doryokuka-sainou-ga-dor-8912.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/99/anh-hung-manh-nhat-tro-lai.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/23/doc-thu-vu-y.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/61/vuong-gia-khong-nen-a.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/198/nidome-no-jinsei-wo-isekai-de.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/84/bach-luyen-thanh-than.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/195/tuong-quan-khong-nen-a.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/234/tien-de-xam-nhap.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+						<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/146/nguyen-ton.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>				
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/79/toi-cuong-phan-phai-he-thong.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3" >
+						<div class="card">
+							<div class="card">
+								<img class="card-img-top" src="http://st.truyenchon.com/data/comics/26/maou-jou-de-oyasumi.jpg" alt="Card image">
+								<div class="card-img-overlay">
+									<i class="far fa-eye"></i> 
+									32.219.212
+									<i class="far fa-comment"></i>
+									2.920
+									<i class="fas fa-heart"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<a href="#" class="stretched-link">Chapter 311 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 310 <span>1 ngày trước</span></a>
+								<a href="#" class="stretched-link">Chapter 309 <span>1 ngày trước</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div style="width: 100%; margin-top: 5%">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item "><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- MAIN RIGHT -->
+			<div class="main_right">                   
+				<div class="top_total" >
+					<div class="top_total_title">
+						<ul class="list-group list-group-horizontal">
+							<a  href=""><li class="list-group-item active">Top tháng</li></a>
+							<a href=""><li class="list-group-item">Top tuần</li></a>
+							<a href=""><li class="list-group-item">Top ngày</li></a>
+						</ul>
+					</div>
+
+					<div class="row">
+						<div style="font-size: 20px; color: #3498db" class="col-md-2"><p>01</p></div>
+						<div class="col-md-2">
+							<img src="http://st.truyenchon.com/data/comics/97/trung-sinh-do-thi-thien-ton.jpg">
+						</div>
+						<div class="col-md-8">
+							<a href="">Trùng sinh đô thị thiên tôn</a>
+							<div>
+								<a href="">Chapter 158</a>
+								<i class="far fa-eye"></i> 
+								32.219.212
+							</div>
+
+						</div>
+					</div>	
+
+					<div class="row">
+						<div style="font-size: 20px; color: #27ae60" class="col-md-2"><p>02</p></div>
+						<div class="col-md-2">
+							<img src="http://st.truyenchon.com/data/comics/97/trung-sinh-do-thi-thien-ton.jpg">
+						</div>
+						<div class="col-md-8">
+							<a href="">Trùng sinh đô thị thiên tôn</a>
+							<div>
+								<a href="">Chapter 158</a>
+								<i class="far fa-eye"></i> 
+								32.219.212
+							</div>
+
+						</div>
+					</div>	
+
+					<div class="row">
+						<div style="font-size: 20px; color: #d35400" class="col-md-2"><p>03</p></div>
+						<div class="col-md-2">
+							<img src="http://st.truyenchon.com/data/comics/97/trung-sinh-do-thi-thien-ton.jpg">
+						</div>
+						<div class="col-md-8">
+							<a href="">Trùng sinh đô thị thiên tôn</a>
+							<div>
+								<a href="">Chapter 158</a>
+								<i class="far fa-eye"></i> 
+								32.219.212
+							</div>
+
+						</div>
+					</div>	
+
+					<div style="border-bottom: none;" class="row">
+						<div style="font-size: 20px; color: #3b3b3b" class="col-md-2"><p>04</p></div>
+						<div class="col-md-2">
+							<img src="http://st.truyenchon.com/data/comics/97/trung-sinh-do-thi-thien-ton.jpg">
+						</div>
+						<div class="col-md-8">
+							<a href="">Trùng sinh đô thị thiên tôn</a>
+							<div>
+								<a href="">Chapter 158</a>
+								<i class="far fa-eye"></i> 
+								32.219.212
+							</div>
+						</div>
+					</div>	
+
+
+				</div>
+
+				<!-- BINH LUAN	 -->
+<div style="font-size: 16px; color: #2980b9; border: thin solid  #ecf0f1; margin-top: 15px;"> Bình luận mới</div>
+				<div class="comment_total" >
+					
+					<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+										<div class="commment">
+						<div class="comment_title">
+							<a href=""><span style="">Diêm La Đế</span></a>
+							<a href=""><span style="float: right;">Chapter 250</span></a>
+						</div>
+						<div class="comment_content">
+							<div class="row">
+								<div class="col-md-2">
+									<img src="https://baokhanhhoa.vn/dataimages/202002/original/images5395109_app_1288.jpg">
+								</div>
+								<div class="col-md-10">
+									<div><span style="color: blue;font-weight: bold;">Trần Thanh Tùng</span><i style="margin-left: 20%" class="fa fa-clock"></i><span>1 giây trước</span> </div>
+									<div>Nội dung quá hay, web cũng đẹp</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+			</div>                                    <!-- MAIN RIGHT END -->
+		</div>   <!-- MAIN END -->
+
+	</div>  	<!-- TOTAL MAIN  END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		kichthuocchuyen= document.getElementById('element_list_run').clientWidth;
+
+		max = kichthuocchuyen*2;
+		margin_Left = 0;
+
+		function move_list_up() {
+			margin_Left = margin_Left + kichthuocchuyen;
+			if(margin_Left > max){
+				margin_Left = 0;
+			}
+			document.getElementById('total_list_expand').style.marginLeft = '-' + margin_Left + 'px';
+		}
+
+		function move_list_down() {
+			margin_Left = margin_Left - kichthuocchuyen;
+			if(margin_Left < 0){
+				margin_Left = max;
+			}
+			document.getElementById('total_list_expand').style.marginLeft = '-' + margin_Left + 'px';
+		}
+
+		setInterval(move_list_up, 1000)
+
+	</script>
+
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

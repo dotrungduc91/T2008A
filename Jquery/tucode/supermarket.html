@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="thanhtoan.css">
+	<link rel="stylesheet" type="text/css" href="supermaket.css">
 </head>
 <body>
 	<!-- HEADER START-->
@@ -70,7 +70,7 @@
 							</tr>
 						</thead>
 						<tbody id="product_added_table">
-
+	
 						</tbody>
 					</table>					
 				</div>
@@ -141,6 +141,7 @@
 				<div class="total_sanpham">
 					<div style="width: 95%; margin: 0 auto; margin-top: 10px;" id="load_total_sanpham">      <!-- SAN PHAM Hang 1-->
 
+					
 
 
 
@@ -191,99 +192,6 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript">
-
-		var product_List = [
-		{'thumnail': 'caingot.png','title':'caingot','price': '20000'},
-		{'thumnail': 'dauhalan.jpg','title':'dauhalan','price': '30000'},
-		{'thumnail': 'duahau.jpg','title':'duahau','price': '7000'},
-		{'thumnail': 'nho.jpg','title':'nho','price': '50000'},
-		{'thumnail': 'cam.jpg','title':'cam','price': '40000'},
-		{'thumnail': 'xoaikho.png','title':'xoaikho','price': '80000'},
-		]
-
-
-
-		$(function (){
-			loadData()
-		})
-
-
-		product_Added=[]
-
-		function loadData(){
-			for (i=0; i < product_List.length; i++) {
-				$('#load_total_sanpham').append(`<div class="sanpham">
-					<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="${product_List[i].thumnail}" alt="Card image cap">
-					<div class="card-body">
-					<p class="card-text">${product_List[i].title}</p>
-					<p class="card-text">${product_List[i].price}</p>
-					<button onclick="add_item(${i})">Thêm vào giỏ hàng</button>
-					</div>
-					</div>
-					</div>`)
-			}
-		}
-		
-		function add_item(index){
-			if(product_Added[index] == undefined){
-				product_Added[index] = {
-					'thumnail': product_List[index].thumnail,
-					'title': product_List[index].title,
-					'price': product_List[index].price,
-					'quantity': 1,
-				} 
-			} else{
-				product_Added[index].quantity++
-			}
-
-
-			console.log(product_Added)	
-			
-			count = 0
-			$('#product_added_table').html('')
-			for (i = 0; i < product_Added.length ; i++) {
-				p = product_Added[i]
-
-				if (product_Added[i] == undefined) {
-					continue;
-				} else{
-					$('#product_added_table').append(`<tr>
-						<th scope="col">${++count}</th>
-						<th scope="col"><img style="width:20%" src="${p.thumnail}"></th>
-						<th scope="col">${p.title}</th>
-						<th scope="col">${p.price}</th>
-						<th scope="col">${p.quantity}</th>
-						<th scope="col">${p.quantity * p.price}</th>
-						</tr>`)
-
-				}
-			}
-			total = 0
-			for (i = 0; i < product_Added.length ; i++){
-
-				if (product_Added[i] == undefined) {
-					continue;
-				} else{
-					
-					
-					 total= total + product_Added[i].quantity * product_Added[i].price
-					$('#tienhang').val(total)
-
-				}
-			}
-			
-		}
-
-		function tinhtien(){
-		tienkhachdua=$('#khachdua').val()
-		giamgia = $('#giamgia').val()
-		giamgia = parseInt(giamgia)
-		tienthua = tienkhachdua - $('#tienhang').val() +  giamgia
-		$('#tienthua').val(tienthua)
-	}
-
-	</script>
+<script type="text/javascript" src="supermaket.js"></script>
 </body>
 </html>

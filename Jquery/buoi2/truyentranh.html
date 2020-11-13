@@ -63,7 +63,7 @@
 					<div class="row" id="fill_data"> <!-- TOTAL TRUYEN -->
  
 					</div>  <!-- TOTAL END -->
-					<form method="post" onsubmit="return saveData()">
+					<form method="get">
 					<div class="row" style="margin-top: 15px;">
 						<div style="width: 60%; margin: 0 auto">
 							<label for="usr">Tieu de:</label>
@@ -83,7 +83,7 @@
 							<input style="width: 80%; float: right;" type="text" id="view_quantity">
 						</div>
 							<div style="width: 60%; margin: 0 auto">
-							<button type="submit" onclick="addData()">Them</button>
+							<button type="button" onclick="addData()">Them</button>
 						</div>
 					</div>
 					</form>
@@ -106,12 +106,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
+		//string json => localStorage
+		var json = localStorage.getItem('ProductList_db')
+		//JSON.parse => chuyen string => mang object
+		var ProductList = JSON.parse(json)
+		//Mang object
+		if(ProductList == null) {
+			ProductList = []
+		}
 
 		$(function() {
-			
+			display();
 		})
-
-		var ProductList =[]
 
 		function addData(){
 			thumnail = $('#thumnail').val()
@@ -119,16 +125,24 @@
 			vote = $('#vote_quantity').val()
 			view = $('#view_quantity').val()
 
-		var product = {
-			'thumnail': thumnail,
-			'title': title,
-			'vote': vote,
-			'view': view,
-		}
+			var product = {
+				'thumnail': thumnail,
+				'title': title,
+				'vote': vote,
+				'view': view,
+			}
 
 			ProductList.push(product)
 
 
+			display();
+			
+			localStorage.setItem ('ProductList_db', JSON.stringify(ProductList))
+			return false
+				
+		}
+
+		function display() {
 			$('#fill_data').html('')
 			for(i=0; i < ProductList.length; i++){
 				$('#fill_data').append(`<div class="col-md-3">
@@ -142,12 +156,8 @@
 							</div>
 						</div>`)
 			}
-			
-			localStorage.setItem ('ProductList_db', ProductList)
-				return false
-				
 		}
 
 	</script>
 </body>
-</html>
+</html>	

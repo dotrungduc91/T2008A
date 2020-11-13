@@ -1,0 +1,438 @@
+
+body{
+	background-color:  #e6e6ff;
+}
+/*MAIN TOP*/
+.main_top{
+	width: 100%;
+	height: 600px;
+	/*background-image: url(team.png); background-size: cover; 	*/
+	/*position: relative;*/
+	background: -webkit-linear-gradient(-19deg, rgba(156, 39, 176, .82) 0px, rgba(63, 81, 181, .8) 100%), url(team.png); background-size: cover;
+}
+
+/*.background{
+	background-color: #673ab7a1; z-index: 100;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+}*/
+
+.main_top_bar{
+/*position: absolute;*/
+position: fixed; 
+width: 100%;
+margin-top: 0px;
+background-color: #673ab7;
+z-index: 10;
+}
+
+
+
+.main_top_bar .navbar-nav a{
+	width: 80%;
+
+}
+
+.main_top_bar .navbar-nav a{
+	color: white;
+	/*font-weight: bold;*/
+	font-size: 20px;
+}
+
+.main_top_text{
+
+	width: 100%;
+	margin-top: 13%;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+}
+
+.main_top_text p{
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.fa-angle-double-down{
+	animation: bounce 1s infinite;
+	position: relative;
+}
+ 
+@keyframes bounce {
+    from {
+        top: 0px;
+        animation-timing-function: ease-out;
+    }
+    25% {
+        top: 5px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        top: 10px;
+        animation-timing-function: ease-out;
+    }
+    75% {
+        top: 15px;
+        animation-timing-function: ease-in;
+    }
+    to {
+        top: 20px;
+    }
+}
+/*HIEU UNG TEXT ANIMATION START*/
+		
+		 .cursor{
+		 	display: inline-block;
+		 	width: 3px;
+		 	background-color: #ccc ;
+		 	margin-left: 2px;
+		 	animation: blink 1s infinite;
+		 }
+
+		 .cursor.typing{
+		 	animation: none;
+		 }
+		 @keyframes blink {
+		 	0%{ background-color: #ccc; }
+		 	49%{ background-color: #ccc; }
+		 	50%{ background-color: transparent; }
+		 	99%{ background-color: transparent; }
+		 	100%{ background-color:#ccc; }
+		 } 
+		 /*HIEU UNG TEXT ANIMATION END*/
+
+/*.main_top_text h2{
+	width: 24ch;
+	margin: 0 auto;
+	color: red;
+	animation: type 4s steps(24) ;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes type{
+	from {width: 0ch;}
+	to {width: 24ch;}
+
+}*/
+
+.main_top button{
+	background-color: none;
+	color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.main_top button:hover{
+	background-color: #673AB7;
+
+}
+
+/*OUR SERVICES*/
+
+.our_service{
+	width: 100%;
+	padding: 50px 50px;
+	text-align: center;
+	color: black;
+}
+
+.our_service .container{
+	text-align: center;
+}
+
+.container .col-md-4{
+	padding: 20px;
+}
+
+.container .col-md-4 .card{
+	border: none;
+}
+
+.hover1 .col-md-4:hover{
+	background-color: #673AB7;
+
+}
+.hover1 .col-md-4 .card:hover{
+	background-color: #673AB7;
+
+}
+
+.container .col-md-4 .card{
+	padding: 0px;
+	padding-top: 10px;
+	width: 100% !important;
+	text-align: center;
+}
+
+.container .col-md-4 .card-body p{
+	text-align: center; 
+
+}
+
+/*ABOUT US*/
+
+.about_us{
+		width: 100%;
+	padding: 50px 50px;
+	text-align: center;
+	color: black;
+}
+
+.whyBiz4{
+	width: 100%;
+
+	background-color: #e6e6ff;
+	
+	display: flex;
+
+}
+
+/*VONG TRON PHAN TRAM*/
+.percent {
+	background-color: white;
+}
+.percent .col-md-3{
+	text-align: center;
+	align-items: center;
+	padding-top: 80px;
+	padding-bottom: 50px;
+
+
+}
+
+.circle{
+	display: flex;
+	width: 144px;
+	height: 144px;
+	border: 3px solid #673AB7;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.circle span{
+	line-height: 142px;
+	margin: 0 auto;
+	font-size: 25px;
+	color: #673AB7;
+}
+
+.percent p{
+	margin-top: 15px;
+	font-size: 16px;
+	color: #673AB7;
+}
+
+
+/*OUR TEAM*/
+.ourteam{
+	background-color: #e6e6ff;
+	padding-top: 50px;
+	margin: 0 auto;
+
+}
+
+.ourteam .col-md-12{
+	text-align: center;
+
+
+}
+
+.ourteam .col-md-3{
+	text-align: center;
+	border: thin solid  #85adad;
+	background-color: #e6e6ff;
+	padding: 0px;
+}
+
+/*Client word*/
+.carousel {
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+.carousel-item{
+	text-align: center;
+	border: thin solid rgba(103, 58, 183, 0.1);
+	padding-top: 7%
+}
+
+.carousel-caption {
+	color: black;
+}
+
+.fa-angle-double-left, .fa-angle-double-right{
+color: #673AB7;
+padding: 10px 20px;
+border: thin solid #673AB7;
+border-radius: 5px;
+font-size: 20px;
+margin-top: 3%;
+
+
+}
+
+.carousel-caption{
+	position: static;
+	padding: 0px;
+}
+/*
+<!--200+  HAPPY CLIENTS -->*/
+
+.total{
+	width: 100%;
+	min-height: 250px;
+	background: -webkit-linear-gradient(-19deg, rgba(156, 39, 176, .82) 0px, rgba(63, 81, 181, .8) 100%), url(team.png); background-size: cover;
+	align-items: center;
+}
+
+.total ul{
+	display: flex;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px auto;
+	text-align: center;
+	justify-content: center;
+	/*position: absolute;*/
+}
+
+.total li{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	padding: 0 7%;
+	padding-top: 6%;
+}
+
+/*FAQ*/
+
+
+.border_main{
+	border-bottom: 1px solid  rgba(103, 58, 183, 0.1);
+	padding: 15px 0px;
+	color: #333;
+}
+
+.border_main_sub{
+	display: none;
+}
+
+
+
+/*ENTER YOUR EMAIL*/
+
+.email_total{
+	text-align: center;
+	background: -webkit-linear-gradient(-19deg, rgba(156, 39, 176, .82) 0px, rgba(63, 81, 181, .8) 100%), url(team.png); background-size: cover;
+	padding-top: 6%;
+	padding-bottom: 6%;
+
+}
+
+.email_total .fa-envelope{
+	color: white;
+	font-size: 62px;
+}
+
+.email_total p{
+	font-size: 18px;
+	color: white;
+}
+
+.email_total .form-control{
+	font-size: 18px;
+	color: white;
+}
+
+.email_total .input-group{
+	width: 60%;
+	margin: 0 auto;
+}
+.email_total .input-group .input-group-append{
+	width: 15%;
+}
+.email_total .input-group-append button{
+	color: white;
+	font-size: 16px;
+	background-color: white;
+	color: #673AB7;
+	width: 100%;
+	height: 100%;
+	border: thin solid white;
+}
+
+.input-group input{
+	background: -webkit-linear-gradient(-19deg, rgba(156, 39, 176, .82) 0px, rgba(63, 81, 181, .8) 100%);
+
+}
+
+/*OUR BLOG*/
+.ourblog{
+	width: 100%;
+	padding: 50px 50px;
+	text-align: center;
+	color: black;
+	font-size: 16px;
+}
+
+
+
+/*OUR CLIENTS*/
+
+.ourclients{
+	width: 100%;
+	padding: 50px 50px;
+	text-align: center;
+	color: black;
+	font-size: 16px;
+}
+
+.ourclients_detail .col-md-3{
+	padding: 0px;
+}
+
+/*FREE CONSULTATION!*/
+
+.FREE_CONSULTATION{
+	width: 100%;
+	padding: 50px 50px;
+	text-align: center;
+	color: black;
+	font-size: 16px;
+}
+
+
+/*FORM DANG KY*/
+
+.col-md-6 input{
+	padding: 10px 0px;
+	border: none;
+	border-bottom: thin solid #b3cbcb;
+	background-color: #e6e6ff;
+	width: 100%;
+}
+
+.col-md-12 textarea{
+	border: none;
+	border-bottom: thin solid #b3cbcb;
+	background-color: #e6e6ff;
+	width: 100%;
+}
+
+/*
+FOOTER*/
+
+.footer{
+	padding: 50px 30px;
+	background-color: #673AB7;
+	text-align: center;
+}
+
+.footer i{
+	width: 4%;
+}
